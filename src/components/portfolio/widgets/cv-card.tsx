@@ -22,7 +22,7 @@ export function CVCard({ cv }: { cv: Content["cv"] }) {
           </div>
         </div>
       </div>
-      <PillLink href={cv.download.href} download={cv.download.filename} icon="download">
+      <PillLink href={cv.download.href} icon="download">
         {cv.download.label}
       </PillLink>
     </WidgetCard>
