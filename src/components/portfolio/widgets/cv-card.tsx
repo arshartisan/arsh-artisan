@@ -1,18 +1,10 @@
+import type { Content } from "@/lib/content";
 import { PillLink } from "../pill-link";
 import { WidgetCard } from "../widget-card";
 
-type CV = {
-  label: string;
-  view: { label: string; href: string };
-  download: { label: string; href: string; filename: string };
-};
-
-export function CVCard({ cv }: { cv: CV }) {
+export function CVCard({ cv }: { cv: Content["cv"] }) {
   return (
-    <WidgetCard label={cv.label} tone="alt" bodyClassName="justify-end gap-2">
-      <PillLink href={cv.view.href} target="_blank" rel="noreferrer" icon="arrow">
-        {cv.view.label}
-      </PillLink>
+    <WidgetCard label={cv.label} tone="alt" bodyClassName="justify-end">
       <PillLink href={cv.download.href} download={cv.download.filename} icon="download">
         {cv.download.label}
       </PillLink>
