@@ -31,7 +31,7 @@ export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
       />
 
       <div className="mx-auto max-w-[calc(1124px+4rem)] px-4 md:px-8">
-        <SiteHeader profile={theme.profile} action={content.site.primaryAction} />
+        <SiteHeader profile={theme.profile} />
 
         <main className="py-8">
           <WidgetGrid>

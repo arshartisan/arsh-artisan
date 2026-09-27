@@ -8,10 +8,6 @@
       "text": "Favorit × Frame",
       "href": "https://framer.com"
     },
-    "primaryAction": {
-      "label": "Buy Template",
-      "href": "https://framer.com/marketplace"
-    },
     "themeSwitcher": {
       "label": "Switch Theme"
     }
