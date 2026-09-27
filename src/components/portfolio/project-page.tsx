@@ -90,7 +90,9 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
                   className="flex min-w-0 flex-col gap-1 md:flex-row md:justify-between md:gap-4 md:border-b md:border-line md:py-3"
                 >
                   <dt className="text-muted-foreground">{item.label}</dt>
-                  <dd className="font-medium text-pretty md:text-end">{item.value}</dd>
+                  <dd className="font-medium text-pretty md:text-end">
+                    {item.label === "Status" ? <StatusBadge value={item.value} /> : item.value}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -188,5 +190,26 @@ function TypeCover({ project }: { project: Project }) {
       </p>
       <p className="relative max-w-md text-sm text-pretty text-muted-foreground">{project.description}</p>
     </div>
+  );
+}
+
+/** Status pill: amber with a pulsing dot while in progress, green once done. */
+const statusTones = {
+  active: "bg-amber-500/15 text-amber-600 dark:text-amber-400 [--dot:var(--color-amber-500)]",
+  done: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 [--dot:var(--color-emerald-500)]",
+} as const;
+
+function StatusBadge({ value }: { value: string }) {
+  const done = /complete|live|shipped|launched/i.test(value);
+  return (
+    <span className={cn("inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 leading-normal", statusTones[done ? "done" : "active"])}>
+      <span className="relative flex size-1.5" aria-hidden="true">
+        {done ? null : (
+          <span className="absolute inset-0 animate-[status-ping_2.4s_cubic-bezier(0.23,1,0.32,1)_infinite] rounded-full bg-(--dot)" />
+        )}
+        <span className="relative size-1.5 rounded-full bg-(--dot)" />
+      </span>
+      {value}
+    </span>
   );
 }
