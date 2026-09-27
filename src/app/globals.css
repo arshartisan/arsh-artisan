@@ -83,8 +83,8 @@
   --btn-shadow: none;
   --field: #161616;
   --field-shadow: none;
-  --tooltip: #292929;
-  --tooltip-fg: #ffffff;
+  --tooltip: #ffffff;
+  --tooltip-fg: #000000;
   --image-outline: oklch(1 0 0 / 0.1);
   --media-fg: #ffffff;
   --media-line: oklch(1 0 0 / 0.2);
@@ -113,7 +113,7 @@
   --btn-shadow: 0 0 0 1px oklch(0 0 0 / 0.14);
   --field: #ffffff;
   --field-shadow: 0 0 0 1px oklch(0 0 0 / 0.14);
-  --tooltip: #1e1e1e;
+  --tooltip: #000000;
   --tooltip-fg: #ffffff;
   --image-outline: oklch(0 0 0 / 0.1);
   --media-fg: #ffffff;

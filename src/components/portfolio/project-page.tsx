@@ -44,8 +44,19 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
           <p className="text-xs text-muted-foreground">
             {project.category} · {project.period}
           </p>
-          <h1 className="text-[clamp(2rem,7vw,4.5rem)] leading-[1.05] font-medium tracking-tight text-balance">
-            {project.title}
+          <h1 className="flex items-center gap-[0.25em] text-[clamp(2rem,7vw,4.5rem)] leading-[1.05] font-medium tracking-tighter text-balance">
+            {project.icon ? (
+              <Image
+                src={project.icon}
+                alt=""
+                width={144}
+                height={144}
+                unoptimized
+                priority
+                className="image-outline size-[0.9em] shrink-0 rounded-[0.22em] object-cover"
+              />
+            ) : null}
+            <span className="min-w-0">{project.title}</span>
           </h1>
         </div>
 
@@ -69,7 +80,7 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
           className={cn(enter, "mt-10 grid gap-10 delay-200 md:mt-16 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:gap-16")}
         >
           <div className="flex flex-col gap-6">
-            <p className="text-lg leading-[1.5] text-pretty md:text-xl">{project.intro}</p>
+            <p className="text-lg leading-[1.5] tracking-tight text-pretty md:text-xl">{project.intro}</p>
             <div>
               <h2 className="sr-only">{labels.stackLabel}</h2>
               <ul className="flex flex-wrap gap-1.5 text-xs">
@@ -124,7 +135,7 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
           {project.sections.map((section) => (
             <section key={section.title} className="grid gap-3 border-t border-line py-8 md:grid-cols-2 md:gap-16 md:py-12">
               <h2 className="text-sm font-medium">{section.title}</h2>
-              <p className="text-base leading-[1.6] text-pretty text-muted-foreground md:text-lg md:text-fg">{section.text}</p>
+              <p className="text-base leading-[1.6] tracking-tighter text-pretty text-muted-foreground md:text-lg md:text-fg">{section.text}</p>
             </section>
           ))}
         </div>
@@ -232,7 +243,7 @@ function CompanyValue({
   if (!logo) return value;
 
   return (
-    <span className="inline-flex items-center gap-1.5">
+    <span className="inline-flex items-center gap-1">
       <Image src={logo} alt="" width={32} height={32} className="size-4 shrink-0 object-contain" />
       {value}
     </span>

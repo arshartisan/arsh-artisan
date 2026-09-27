@@ -45,7 +45,7 @@ export function ProjectsCard({ projects, themePath }: { projects: Content["proje
 
 /** Round thumbnail: the project's app icon, else its cover image, else a monogram. */
 export function ProjectThumb({ project, className }: { project: Project; className?: string }) {
-  const base = "image-outline size-12 shrink-0 rounded-full sm:size-15";
+  const base = "image-outline size-12 shrink-0 rounded-lg sm:size-15";
   const src = project.icon ?? project.image;
 
   if (src) {

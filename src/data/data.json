@@ -254,6 +254,10 @@
           "Spring Boot",
           "REST APIs"
         ],
+        "link": {
+          "label": "Visit passque.com",
+          "href": "https://passque.com"
+        },
         "gallery": [],
         "sections": [
           {
@@ -300,6 +304,10 @@
           "PostgreSQL",
           "Real-time updates"
         ],
+        "link": {
+          "label": "Visit weels.lk",
+          "href": "https://weels.lk"
+        },
         "gallery": [],
         "sections": [
           {
@@ -394,6 +402,10 @@
           "PostgreSQL",
           "Wallets"
         ],
+        "link": {
+          "label": "Visit bookmyplay.lk",
+          "href": "https://bookmyplay.lk"
+        },
         "gallery": [],
         "sections": [
           {
@@ -439,6 +451,10 @@
           "Secure payments",
           "Order tracking"
         ],
+        "link": {
+          "label": "Visit wrapitup.lk",
+          "href": "https://wrapitup.lk"
+        },
         "gallery": [],
         "sections": [
           {
