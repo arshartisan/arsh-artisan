@@ -29,7 +29,7 @@ export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
       <ThemeSwitcher
         label={content.site.themeSwitcher.label}
         current={theme.id}
-        themes={themes.map((t) => ({ id: t.id, label: t.label, path: t.path, avatar: t.profile.avatar }))}
+        themes={themes.map((t) => ({ id: t.id, label: t.label, path: t.path }))}
       />
 
       <div className="mx-auto max-w-[calc(1124px+4rem)] px-4 md:px-8">

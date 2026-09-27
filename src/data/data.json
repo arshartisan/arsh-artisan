@@ -73,39 +73,6 @@
         "label": "Client Projects Led",
         "value": 15
       }
-    },
-    {
-      "id": "brutal",
-      "label": "Brutal",
-      "path": "/brutal",
-      "profile": {
-        "name": "Muhammed Arshaq",
-        "role": "AI & Computer Vision",
-        "avatar": "/images/me.png"
-      },
-      "time": {
-        "label": "Time",
-        "location": "Puttalam, LK",
-        "timezone": "Asia/Colombo"
-      },
-      "status": {
-        "label": "Mode",
-        "indicator": "#86efac",
-        "text": "Training models by day, shipping microservices by night. Ask me about YOLOv8 👾",
-        "action": {
-          "label": "Contact Me",
-          "href": "mailto:arshartisan@gmail.com"
-        }
-      },
-      "about": {
-        "label": "About",
-        "name": "Muhammed Arshaq",
-        "text": "I build AI into real products. My final-year research at SLIIT delivered BrineX Vision, a real-time computer vision system that grades salt crystals with over 99% detection accuracy on CPU-only hardware, and I co-authored an IEEE paper presented at ICHORA 2026."
-      },
-      "stat": {
-        "label": "Dean’s List Awards",
-        "value": 4
-      }
     }
   ],
   "experience": {

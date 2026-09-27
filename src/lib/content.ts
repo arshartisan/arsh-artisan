@@ -2,7 +2,7 @@ import data from "@/data/data.json";
 
 export type Content = typeof data;
 export type Theme = Content["themes"][number];
-export type ThemeId = "dark" | "light" | "brutal";
+export type ThemeId = "dark" | "light";
 export type SocialPlatform = "x" | "github" | "linkedin" | "instagram" | "email";
 
 export const content = data;

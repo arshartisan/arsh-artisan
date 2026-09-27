@@ -2,7 +2,6 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import type { ThemeId } from "@/lib/content";
@@ -13,7 +12,6 @@ type SwitcherTheme = {
   id: ThemeId;
   label: string;
   path: string;
-  avatar: string;
 };
 
 export function ThemeSwitcher({
@@ -127,40 +125,20 @@ export function ThemeSwitcher({
   );
 }
 
-const themeIcons: Partial<Record<ThemeId, typeof Sun>> = {
+const themeIcons: Record<ThemeId, typeof Sun> = {
   dark: Moon,
   light: Sun,
 };
 
-/** Dark and Light show a moon / sun; other themes show their avatar. */
-function ThemeSwatch({
-  theme,
-  className,
-}: {
-  theme: SwitcherTheme;
-  className: string;
-}) {
+/** Moon / sun swatch for each theme. */
+function ThemeSwatch({ theme, className }: { theme: SwitcherTheme; className: string }) {
   const Icon = themeIcons[theme.id];
-
-  if (!Icon) {
-    return (
-      <Image
-        src={theme.avatar}
-        alt=""
-        width={52}
-        height={52}
-        className={cn("image-outline object-cover", className)}
-      />
-    );
-  }
 
   return (
     <span
       className={cn(
         "flex items-center justify-center",
-        theme.id === "light"
-          ? "bg-white text-black"
-          : "bg-black text-white shadow-[inset_0_0_0_1px_oklch(1_0_0/0.2)]",
+        theme.id === "light" ? "bg-white text-black" : "bg-black text-white shadow-[inset_0_0_0_1px_oklch(1_0_0/0.2)]",
         className,
       )}
     >

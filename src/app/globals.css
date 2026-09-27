@@ -116,32 +116,6 @@
   --media-line: oklch(1 0 0 / 0.35);
 }
 
-[data-theme="brutal"] {
-  color-scheme: light;
-  --page: #f1d05b;
-  --card: #fbeda6;
-  --card-alt: #ffffff;
-  --item: #ffffff;
-  --item-hover: #fffdf2;
-  --fg: #000000;
-  --muted: oklch(0 0 0 / 0.5);
-  --faint: oklch(0 0 0 / 0.3);
-  --line: #000000;
-  --line-soft: oklch(0 0 0 / 0.55);
-  --card-shadow: 0 0 0 1px #000000, 4px 4px 0 1px #000000;
-  --btn: #000000;
-  --btn-fg: #ffffff;
-  --btn-hover: #262626;
-  --btn-shadow: none;
-  --field: #ffffff;
-  --field-shadow: 0 0 0 1px #000000;
-  --tooltip: #000000;
-  --tooltip-fg: #ffffff;
-  --image-outline: oklch(0 0 0 / 0.1);
-  --media-fg: #ffffff;
-  --media-line: oklch(1 0 0 / 0.3);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -13,7 +13,7 @@ const spans = {
 
 type WidgetCardProps = {
   span?: keyof typeof spans;
-  /** "alt" surfaces stand out from regular cards (white cards in the Brutal theme). */
+  /** "alt" surfaces can be styled to stand out from regular cards via --card-alt. */
   tone?: "default" | "alt";
   label?: ReactNode;
   meta?: ReactNode;
