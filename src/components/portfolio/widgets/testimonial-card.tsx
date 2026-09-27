@@ -19,10 +19,10 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
               rel={external ? "noreferrer" : undefined}
               className="outline-none after:absolute after:inset-0 after:rounded-card focus-visible:after:ring-2 focus-visible:after:ring-ring focus-visible:after:ring-inset"
             >
-              „{testimonial.quote}“
+              “{testimonial.quote}”
             </a>
           ) : (
-            <>„{testimonial.quote}“</>
+            <>“{testimonial.quote}”</>
           )}
         </blockquote>
         <figcaption className="flex items-center gap-2.5">
