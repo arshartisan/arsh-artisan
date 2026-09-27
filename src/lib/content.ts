@@ -3,7 +3,7 @@ import data from "@/data/data.json";
 export type Content = typeof data;
 export type Theme = Content["themes"][number];
 export type ThemeId = "dark" | "light" | "brutal";
-export type SocialPlatform = "x" | "linkedin" | "instagram" | "email";
+export type SocialPlatform = "x" | "github" | "linkedin" | "instagram" | "email";
 
 export const content = data;
 
