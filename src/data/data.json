@@ -189,95 +189,6 @@
         ]
       },
       {
-        "slug": "city-bikes-segway",
-        "title": "City Bikes & Segway",
-        "description": "E-scooter rental and fleet tracking app, Qatar.",
-        "category": "Mobile & IoT",
-        "period": "Jan 2025 - Feb 2026",
-        "icon": "/images/project-icons/citybikesegway-icon.svg",
-        "intro": "A self-service rental app for a Qatari micro-mobility operator, covering live-map vehicle discovery, unlock, in-app payment and wallet-based 30-minute and 1-hour ride passes, backed by an admin dashboard with live IoT fleet telemetry.",
-        "meta": [
-          {
-            "label": "Client",
-            "value": "City Bikes & Segway"
-          },
-          {
-            "label": "Company",
-            "value": "FocalDive"
-          },
-          {
-            "label": "Market",
-            "value": "Qatar"
-          }
-        ],
-        "stack": [
-          "Cross-platform mobile",
-          "IoT telemetry",
-          "In-app payments",
-          "Wallets",
-          "RTL / Arabic"
-        ],
-        "gallery": [],
-        "sections": [
-          {
-            "title": "Challenge",
-            "text": "Riders needed to find, unlock and pay for a scooter in a few taps, while the operator needed to see where every vehicle was and make sure no ride started without payment."
-          },
-          {
-            "title": "Approach",
-            "text": "Built live-map discovery and unlock flows with wallet-based ride passes, integrated IoT location telemetry into an admin dashboard for live fleet visibility, and gated every unlock on payment authorisation."
-          },
-          {
-            "title": "Results",
-            "text": "Shipped a bilingual English and Arabic app with full RTL support, giving riders self-service rentals and the operator real-time visibility across the fleet."
-          }
-        ]
-      },
-      {
-        "slug": "weels",
-        "title": "Weels",
-        "description": "End-to-end food ordering and delivery platform.",
-        "category": "Mobile Platform",
-        "period": "Oct 2025 - Jun 2026",
-        "icon": "/images/project-icons/weels-icon.svg",
-        "intro": "Two connected cross-platform apps, one for customers and one for delivery partners, on a shared backend: restaurant browsing, cart, secure checkout, live order tracking, rider assignment and run history.",
-        "meta": [
-          {
-            "label": "Company",
-            "value": "FocalDive"
-          },
-          {
-            "label": "Role",
-            "value": "Full-Stack Engineer"
-          },
-          {
-            "label": "Year",
-            "value": "2026"
-          }
-        ],
-        "stack": [
-          "React Native",
-          "NestJS",
-          "PostgreSQL",
-          "Real-time updates"
-        ],
-        "gallery": [],
-        "sections": [
-          {
-            "title": "Challenge",
-            "text": "Dispatch ran over phone calls, customers had no live view of their order, and there was nothing stopping an order from being assigned twice or only partly assigned."
-          },
-          {
-            "title": "Approach",
-            "text": "Pushed every rider state change to the customer app in real time and moved dispatch from phone calls into an in-system queue, with PostgreSQL relational constraints guarding order assignment."
-          },
-          {
-            "title": "Results",
-            "text": "Customers track orders live, riders work from a single queue with full run history, and the database itself prevents partial or duplicate assignments."
-          }
-        ]
-      },
-      {
         "slug": "molt",
         "title": "Molt",
         "description": "Real-time livestock monitoring with IP cameras.",
@@ -362,6 +273,95 @@
           {
             "title": "Results",
             "text": "Patients follow their place in the queue from their phone and arrive when it is their turn instead of waiting on site."
+          }
+        ]
+      },
+      {
+        "slug": "weels",
+        "title": "Weels",
+        "description": "End-to-end food ordering and delivery platform.",
+        "category": "Mobile Platform",
+        "period": "Oct 2025 - Jun 2026",
+        "icon": "/images/project-icons/weels-icon.svg",
+        "intro": "Two connected cross-platform apps, one for customers and one for delivery partners, on a shared backend: restaurant browsing, cart, secure checkout, live order tracking, rider assignment and run history.",
+        "meta": [
+          {
+            "label": "Company",
+            "value": "FocalDive"
+          },
+          {
+            "label": "Role",
+            "value": "Full-Stack Engineer"
+          },
+          {
+            "label": "Year",
+            "value": "2026"
+          }
+        ],
+        "stack": [
+          "React Native",
+          "NestJS",
+          "PostgreSQL",
+          "Real-time updates"
+        ],
+        "gallery": [],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Dispatch ran over phone calls, customers had no live view of their order, and there was nothing stopping an order from being assigned twice or only partly assigned."
+          },
+          {
+            "title": "Approach",
+            "text": "Pushed every rider state change to the customer app in real time and moved dispatch from phone calls into an in-system queue, with PostgreSQL relational constraints guarding order assignment."
+          },
+          {
+            "title": "Results",
+            "text": "Customers track orders live, riders work from a single queue with full run history, and the database itself prevents partial or duplicate assignments."
+          }
+        ]
+      },
+      {
+        "slug": "city-bikes-segway",
+        "title": "City Bikes & Segway",
+        "description": "E-scooter rental and fleet tracking app, Qatar.",
+        "category": "Mobile & IoT",
+        "period": "Jan 2025 - Feb 2026",
+        "icon": "/images/project-icons/citybikesegway-icon.svg",
+        "intro": "A self-service rental app for a Qatari micro-mobility operator, covering live-map vehicle discovery, unlock, in-app payment and wallet-based 30-minute and 1-hour ride passes, backed by an admin dashboard with live IoT fleet telemetry.",
+        "meta": [
+          {
+            "label": "Client",
+            "value": "City Bikes & Segway"
+          },
+          {
+            "label": "Company",
+            "value": "FocalDive"
+          },
+          {
+            "label": "Market",
+            "value": "Qatar"
+          }
+        ],
+        "stack": [
+          "Cross-platform mobile",
+          "IoT telemetry",
+          "In-app payments",
+          "Wallets",
+          "RTL / Arabic"
+        ],
+        "gallery": [],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Riders needed to find, unlock and pay for a scooter in a few taps, while the operator needed to see where every vehicle was and make sure no ride started without payment."
+          },
+          {
+            "title": "Approach",
+            "text": "Built live-map discovery and unlock flows with wallet-based ride passes, integrated IoT location telemetry into an admin dashboard for live fleet visibility, and gated every unlock on payment authorisation."
+          },
+          {
+            "title": "Results",
+            "text": "Shipped a bilingual English and Arabic app with full RTL support, giving riders self-service rentals and the operator real-time visibility across the fleet."
           }
         ]
       },
