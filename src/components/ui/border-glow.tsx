@@ -127,15 +127,16 @@ export function useBorderGlow() {
   return { onPointerMove, onPointerLeave };
 }
 
-/** The glow layers, all behind the card content. Render inside a `relative isolate` rounded card. */
+/** The glow layers, all behind the card content. Render inside a `relative isolate` card with the `rounded-card` radius. */
 export function BorderGlowLayers() {
+  // Hover-only effect: skip it entirely on touch devices, where it can never activate.
   return (
-    <>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-1 rounded-[inherit]" style={borderStyle} />
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-1 rounded-[inherit]" style={fillStyle} />
-      <span aria-hidden="true" className="pointer-events-none absolute -z-1 rounded-[inherit]" style={outerStyle}>
-        <span className="absolute rounded-[inherit]" style={{ inset: GLOW_RADIUS, boxShadow: GLOW_SHADOW }} />
+    <div aria-hidden="true" className="contents [@media(hover:none)]:hidden">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-1 rounded-card" style={borderStyle} />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-1 rounded-card" style={fillStyle} />
+      <span aria-hidden="true" className="pointer-events-none absolute -z-1 rounded-card" style={outerStyle}>
+        <span className="absolute rounded-card" style={{ inset: GLOW_RADIUS, boxShadow: GLOW_SHADOW }} />
       </span>
-    </>
+    </div>
   );
 }

@@ -23,8 +23,9 @@ import { ExperienceCard, SideProjectsCard } from "./widgets/timeline-card";
  * and collapses cleanly to 4 and 2 columns.
  */
 export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
+  // overflow-x-clip: card glows spill past the grid edges; clip (not hidden) keeps sticky/scroll intact.
   return (
-    <div data-theme={theme.id} className="min-h-dvh bg-page text-fg">
+    <div data-theme={theme.id} className="min-h-dvh overflow-x-clip bg-page text-fg">
       <ThemeSync theme={theme.id} />
       <ThemeSwitcher
         label={content.site.themeSwitcher.label}
