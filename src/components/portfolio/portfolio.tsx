@@ -39,7 +39,7 @@ export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
             <StatusCard status={theme.status} />
             <AboutCard about={theme.about} />
             <ExperienceCard experience={content.experience} />
-            <ProjectsCard projects={content.projects} />
+            <ProjectsCard projects={content.projects} themePath={theme.path} />
             <SocialsCard socials={content.socials} />
             <FeaturedCard featured={theme.featured} />
             <SideProjectsCard sideProjects={content.sideProjects} />

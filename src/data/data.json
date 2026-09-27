@@ -149,24 +149,157 @@
 
   "projects": {
     "label": "Projects",
+    "backLabel": "Back",
+    "nextLabel": "Next Project",
     "items": [
       {
+        "slug": "fusion-pro-presentation",
         "title": "Fusion Pro Presentation",
         "description": "I’ve come up with something truly unique.",
+        "category": "Presentation Design",
+        "date": "2026-03-12",
         "image": "/images/project-fusion.jpg",
-        "href": "#"
+        "intro": "Fusion Pro needed a launch presentation that felt as considered as the product itself. I built a modular slide system — type, grid and motion rules — that let the team tell one story across keynotes, sales decks and social cut-downs without it ever feeling templated.",
+        "meta": [
+          {
+            "label": "Client",
+            "value": "Fusion"
+          },
+          {
+            "label": "Role",
+            "value": "Creative Director"
+          },
+          {
+            "label": "Year",
+            "value": "2025"
+          }
+        ],
+        "link": {
+          "label": "View the full deck",
+          "href": "https://example.com"
+        },
+        "gallery": [
+          {
+            "src": "/images/work-dark.jpg",
+            "alt": "Black smartphone standing on a granite block"
+          },
+          {
+            "src": "/images/work-light.jpg",
+            "alt": "White pump bottle on a speckled stone ledge"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Every team was building its own slides, so the product showed up differently in every room. Launch was six weeks away and there was no shared visual language to fall back on."
+          },
+          {
+            "title": "Objective",
+            "text": "Create a presentation system flexible enough for a keynote stage and a 1:1 sales call, with clear rules so anyone on the team could build on-brand slides in minutes."
+          },
+          {
+            "title": "Results",
+            "text": "The system shipped with 40 layouts and a motion kit. Deck build time dropped by more than half, and the launch keynote became the most-viewed video in the company’s history."
+          }
+        ]
       },
       {
+        "slug": "new-publication",
         "title": "New Publication",
         "description": "Read out my new article on the impact of AI.",
+        "category": "Editorial",
+        "date": "2026-02-03",
         "image": "/images/project-publication.jpg",
-        "href": "#"
+        "intro": "A long-form essay on how AI is reshaping creative work — not replacing the designer, but changing where the craft lives. I wrote, art-directed and designed the piece as a standalone reading experience.",
+        "meta": [
+          {
+            "label": "Publisher",
+            "value": "Independent"
+          },
+          {
+            "label": "Role",
+            "value": "Writer & Designer"
+          },
+          {
+            "label": "Year",
+            "value": "2026"
+          }
+        ],
+        "link": {
+          "label": "Read the article",
+          "href": "https://example.com"
+        },
+        "gallery": [
+          {
+            "src": "/images/work-brutal.jpg",
+            "alt": "Laptop showing a giant pixel cursor on a yellow screen"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Most writing about AI and design is either hype or fear. There was room for a calm, practical take grounded in real studio work."
+          },
+          {
+            "title": "Objective",
+            "text": "Publish an essay that designers could actually use: concrete workflows, honest trade-offs, and a layout that made a 4,000-word read feel effortless."
+          },
+          {
+            "title": "Results",
+            "text": "The article reached over 120k readers in its first month, was translated into four languages, and led to talks at two design conferences."
+          }
+        ]
       },
       {
+        "slug": "swoosh-playground",
         "title": "Swoosh Playground",
         "description": "Experimental project for Nike Shoe Launch.",
+        "category": "Experimental",
+        "date": "2025-11-20",
         "image": "/images/project-swoosh.jpg",
-        "href": "#"
+        "intro": "An interactive playground built for a sneaker launch: a browser-based space where visitors could remix colorways, play with physics-driven shoes and share their creations before the drop.",
+        "meta": [
+          {
+            "label": "Client",
+            "value": "Nike"
+          },
+          {
+            "label": "Role",
+            "value": "Creative Director"
+          },
+          {
+            "label": "Year",
+            "value": "2025"
+          }
+        ],
+        "link": {
+          "label": "Explore the playground",
+          "href": "https://example.com"
+        },
+        "gallery": [
+          {
+            "src": "/images/work-light.jpg",
+            "alt": "White pump bottle on a speckled stone ledge"
+          },
+          {
+            "src": "/images/work-dark.jpg",
+            "alt": "Black smartphone standing on a granite block"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Sneaker launches all look the same: a countdown and a product shot. The brief was to build anticipation by letting people play with the shoe before they could buy it."
+          },
+          {
+            "title": "Objective",
+            "text": "Design an experience that ran smoothly on any phone, was fun within five seconds, and turned every visitor’s creation into something worth sharing."
+          },
+          {
+            "title": "Results",
+            "text": "Over 300k designs were created in launch week, social shares outpaced the previous release threefold, and the drop sold out in under ten minutes."
+          }
+        ]
       }
     ]
   },
