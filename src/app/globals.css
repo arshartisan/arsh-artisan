@@ -63,6 +63,8 @@
 
 :root,
 [data-theme="dark"] {
+  --glow-blend: plus-lighter;
+  --glow-fill-blend: soft-light;
   color-scheme: dark;
   --page: #161616;
   --card: #1e1e1e;
@@ -89,6 +91,8 @@
 }
 
 [data-theme="light"] {
+  --glow-blend: normal;
+  --glow-fill-blend: normal;
   color-scheme: light;
   --page: #f4f4f4;
   --card: #ffffff;

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { CSSProperties, ReactNode } from "react";
+import { BorderGlowLayers, useBorderGlow } from "@/components/ui/border-glow";
 import { itemVariants } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
@@ -32,19 +33,26 @@ export function WidgetCard({
   children,
 }: WidgetCardProps) {
   const surface = tone === "alt" ? "var(--card-alt)" : "var(--card)";
+  const glow = useBorderGlow();
 
   return (
     <motion.section
       variants={itemVariants}
       style={{ "--surface": surface } as CSSProperties}
+      {...glow}
       className={cn(
-        "relative flex min-w-0 flex-col overflow-hidden rounded-card bg-(--surface) p-2.5 text-xs shadow-(--card-shadow)",
+        // The border glow spills outside the card, so clipping lives on the inner wrapper,
+        // and a hovered card lifts above its neighbours so they don't cover the glow.
+        "relative isolate flex min-w-0 flex-col rounded-card bg-(--surface) p-2.5 text-xs shadow-(--card-shadow) hover:z-10",
         spans[span],
         className,
       )}
     >
-      {label ? <WidgetHeader label={label} meta={meta} /> : null}
-      <div className={cn("flex min-h-0 flex-1 flex-col", bodyClassName)}>{children}</div>
+      <BorderGlowLayers />
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
+        {label ? <WidgetHeader label={label} meta={meta} /> : null}
+        <div className={cn("flex min-h-0 flex-1 flex-col", bodyClassName)}>{children}</div>
+      </div>
     </motion.section>
   );
 }
