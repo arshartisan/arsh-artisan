@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Portfolio } from "@/components/portfolio/portfolio";
-import { content, getSegmentThemes } from "@/lib/content";
+import { getSegmentThemes } from "@/lib/content";
 
 export const dynamicParams = false;
 
@@ -16,7 +16,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[theme]">): Promise<Metadata> {
   const theme = findTheme((await params).theme);
   if (!theme) return {};
-  return { title: `${theme.profile.name} — ${theme.profile.role} · ${content.site.copyright}` };
+  return { title: `${theme.profile.name} - ${theme.profile.role}` };
 }
 
 export default async function ThemePage({ params }: PageProps<"/[theme]">) {
