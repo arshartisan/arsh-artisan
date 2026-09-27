@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { Moon, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
@@ -8,7 +9,12 @@ import type { ThemeId } from "@/lib/content";
 import { labelSwapVariants, swapTransition } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
-type SwitcherTheme = { id: ThemeId; label: string; path: string; avatar: string };
+type SwitcherTheme = {
+  id: ThemeId;
+  label: string;
+  path: string;
+  avatar: string;
+};
 
 export function ThemeSwitcher({
   themes,
@@ -40,10 +46,15 @@ export function ThemeSwitcher({
     };
   }, [open]);
 
-  const activeLabel = open ? themes.find((t) => t.id === (hovered ?? current))?.label ?? label : label;
+  const activeLabel = open
+    ? (themes.find((t) => t.id === (hovered ?? current))?.label ?? label)
+    : label;
 
   return (
-    <div ref={rootRef} className="fixed top-0 left-1/2 z-50 w-28 -translate-x-1/2">
+    <div
+      ref={rootRef}
+      className="fixed top-0 left-1/2 z-50 w-28 -translate-x-1/2"
+    >
       <div
         data-open={open}
         className={cn(
@@ -96,13 +107,10 @@ export function ThemeSwitcher({
                   onClick={() => setOpen(false)}
                   className="group/avatar block rounded-full outline-none"
                 >
-                  <Image
-                    src={theme.avatar}
-                    alt=""
-                    width={52}
-                    height={52}
+                  <ThemeSwatch
+                    theme={theme}
                     className={cn(
-                      "image-outline size-6.5 rounded-full object-cover transition-[opacity,scale,box-shadow] duration-150 ease-out group-active/avatar:scale-[0.96]",
+                      "size-6.5 rounded-full transition-[opacity,scale,box-shadow] duration-150 ease-out group-active/avatar:scale-[0.96]",
                       "group-focus-visible/avatar:shadow-[0_0_0_2px_#1e1e1e,0_0_0_3px_white]",
                       isCurrent
                         ? "shadow-[0_0_0_2px_#1e1e1e,0_0_0_3px_white]"
@@ -116,5 +124,47 @@ export function ThemeSwitcher({
         </ul>
       </div>
     </div>
+  );
+}
+
+const themeIcons: Partial<Record<ThemeId, typeof Sun>> = {
+  dark: Moon,
+  light: Sun,
+};
+
+/** Dark and Light show a moon / sun; other themes show their avatar. */
+function ThemeSwatch({
+  theme,
+  className,
+}: {
+  theme: SwitcherTheme;
+  className: string;
+}) {
+  const Icon = themeIcons[theme.id];
+
+  if (!Icon) {
+    return (
+      <Image
+        src={theme.avatar}
+        alt=""
+        width={52}
+        height={52}
+        className={cn("image-outline object-cover", className)}
+      />
+    );
+  }
+
+  return (
+    <span
+      className={cn(
+        "flex items-center justify-center",
+        theme.id === "light"
+          ? "bg-white text-black"
+          : "bg-black text-white shadow-[inset_0_0_0_1px_oklch(1_0_0/0.2)]",
+        className,
+      )}
+    >
+      <Icon className="size-3.5" strokeWidth={1.75} aria-hidden="true" />
+    </span>
   );
 }
