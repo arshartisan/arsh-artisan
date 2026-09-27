@@ -3,16 +3,10 @@
     "title": "Muhammed Arshaq - Full-Stack Software Engineer",
     "description": "Full-stack software engineer from Sri Lanka building web, mobile and AI-enabled products. Co-founder of FocalDive, BSc (Hons) Software Engineering, SLIIT.",
     "copyright": "Muhammed Arshaq",
-    "credit": {
-      "label": "Created by",
-      "text": "Favorit × Frame",
-      "href": "https://framer.com"
-    },
     "themeSwitcher": {
       "label": "Switch Theme"
     }
   },
-
   "themes": [
     {
       "id": "dark",
@@ -32,19 +26,15 @@
         "label": "Mode",
         "indicator": "#34c759",
         "text": "Open to full-stack, mobile and AI engineering roles. Let’s build something that ships 🚀",
-        "action": { "label": "Contact Me", "href": "mailto:arshartisan@gmail.com" }
+        "action": {
+          "label": "Contact Me",
+          "href": "mailto:arshartisan@gmail.com"
+        }
       },
       "about": {
         "label": "About",
         "name": "Muhammed Arshaq",
         "text": "I’m Muhammed Arshaq, a full-stack software engineer from Puttalam, Sri Lanka with 5+ years of shipping web, mobile and AI-enabled products for startups and SMEs across Sri Lanka, the GCC and beyond. As co-founder of FocalDive, I take products from first requirements to production."
-      },
-      "featured": {
-        "label": "Latest Research",
-        "linkLabel": "BrineX Vision",
-        "href": "/projects/brinex-vision",
-        "image": "/images/projects/brinex-dashboard.jpg",
-        "imageAlt": "BrineX Vision dashboard detecting pure, impure and unwanted salt crystals on a live camera feed"
       },
       "stat": {
         "label": "Years of Experience",
@@ -69,19 +59,15 @@
         "label": "Mode",
         "indicator": "#fbbf24",
         "text": "Building at FocalDive. Taking on a few new client projects this quarter 🛠️",
-        "action": { "label": "Contact Me", "href": "mailto:arshartisan@gmail.com" }
+        "action": {
+          "label": "Contact Me",
+          "href": "mailto:arshartisan@gmail.com"
+        }
       },
       "about": {
         "label": "About",
         "name": "Muhammed Arshaq",
         "text": "Hi, I’m Arshaq. I co-founded FocalDive, a software agency building web, mobile, booking, e-commerce, SaaS and AI products. I lead delivery end to end: requirements, architecture, real-time features, payments and releases, and I mentor the junior developers on our team."
-      },
-      "featured": {
-        "label": "Latest Research",
-        "linkLabel": "BrineX Vision",
-        "href": "/light/projects/brinex-vision",
-        "image": "/images/projects/brinex-batches.jpg",
-        "imageAlt": "BrineX batch quality table with purity, whiteness and quality scores per batch"
       },
       "stat": {
         "label": "Client Projects Led",
@@ -106,19 +92,15 @@
         "label": "Mode",
         "indicator": "#86efac",
         "text": "Training models by day, shipping microservices by night. Ask me about YOLOv8 👾",
-        "action": { "label": "Contact Me", "href": "mailto:arshartisan@gmail.com" }
+        "action": {
+          "label": "Contact Me",
+          "href": "mailto:arshartisan@gmail.com"
+        }
       },
       "about": {
         "label": "About",
         "name": "Muhammed Arshaq",
         "text": "I build AI into real products. My final-year research at SLIIT delivered BrineX Vision, a real-time computer vision system that grades salt crystals with over 99% detection accuracy on CPU-only hardware, and I co-authored an IEEE paper presented at ICHORA 2026."
-      },
-      "featured": {
-        "label": "Latest Research",
-        "linkLabel": "BrineX Vision",
-        "href": "/brutal/projects/brinex-vision",
-        "image": "/images/projects/brinex-detection.jpg",
-        "imageAlt": "YOLOv8 live inference frame with bounding boxes around pure, impure and unwanted objects"
       },
       "stat": {
         "label": "Dean’s List Awards",
@@ -126,9 +108,8 @@
       }
     }
   ],
-
   "experience": {
-    "label": "Experience & Education",
+    "label": "Experience",
     "items": [
       {
         "start": "2021",
@@ -138,16 +119,35 @@
       },
       {
         "start": "2022",
-        "end": "2026",
-        "title": "SLIIT",
-        "subtitle": "BSc (Hons) IT, Software Engineering. Second Class Upper, WGPA 3.63, Dean’s List ×4."
+        "end": "2024",
+        "title": "IMARA Software Solutions",
+        "subtitle": "Web Application Developer. Production MERN-stack apps with CRM functionality and REST API integration."
       },
-      { "start": "2022", "end": "2024", "title": "IMARA Software Solutions", "subtitle": "Web Application Developer (MERN, CRM)" },
-      { "start": "2021", "end": "2022", "title": "IMARA Software Solutions", "subtitle": "Mobile Application Developer Intern" },
-      { "start": "2018", "end": "2020", "title": "President’s Science College", "subtitle": "G.C.E. A/L Physical Science" }
+      {
+        "start": "2021",
+        "end": "2022",
+        "title": "IMARA Software Solutions",
+        "subtitle": "Mobile Application Developer Intern. Cross-platform app features built from Figma designs."
+      }
     ]
   },
-
+  "education": {
+    "label": "Education",
+    "items": [
+      {
+        "start": "2022",
+        "end": "2026",
+        "title": "SLIIT",
+        "subtitle": "BSc (Hons) IT, specialising in Software Engineering. Second Class Upper (WGPA 3.63), Dean’s List ×4, SLIIT Scholarship Award."
+      },
+      {
+        "start": "2018",
+        "end": "2020",
+        "title": "President’s Science College",
+        "subtitle": "G.C.E. A/L Physical Science: Physics, Chemistry, Combined Mathematics."
+      }
+    ]
+  },
   "projects": {
     "label": "Projects",
     "backLabel": "Back",
@@ -163,16 +163,47 @@
         "image": "/images/projects/brinex-dashboard.jpg",
         "intro": "BrineX is a four-module AI platform for climate-intelligent salt production, built by a four-member team as our final-year research at SLIIT. I designed and delivered its computer vision quality-control module: the first AI-based visual inspection system for tropical salt production, detecting pure salt, impure salt and foreign material in real time.",
         "meta": [
-          { "label": "Institution", "value": "SLIIT" },
-          { "label": "Role", "value": "CV & Full-Stack Engineer" },
-          { "label": "Year", "value": "2026" }
+          {
+            "label": "Institution",
+            "value": "SLIIT"
+          },
+          {
+            "label": "Role",
+            "value": "CV & Full-Stack Engineer"
+          },
+          {
+            "label": "Year",
+            "value": "2026"
+          }
         ],
-        "stack": ["YOLOv8", "PyTorch", "ONNX Runtime", "NestJS", "gRPC", "MongoDB", "Socket.io", "Next.js", "NX"],
-        "link": { "label": "Related IEEE paper (ICHORA 2026)", "href": "https://ieeexplore.ieee.org/document/11537206" },
+        "stack": [
+          "YOLOv8",
+          "PyTorch",
+          "ONNX Runtime",
+          "NestJS",
+          "gRPC",
+          "MongoDB",
+          "Socket.io",
+          "Next.js",
+          "NX"
+        ],
+        "link": {
+          "label": "Related IEEE paper (ICHORA 2026)",
+          "href": "https://ieeexplore.ieee.org/document/11537206"
+        },
         "gallery": [
-          { "src": "/images/projects/brinex-detection.jpg", "alt": "YOLOv8 inference frame with class-coloured bounding boxes and confidence scores" },
-          { "src": "/images/projects/brinex-batches.jpg", "alt": "Batch quality assessment table with purity, whiteness and quality per batch" },
-          { "src": "/images/projects/brinex-analytics.jpg", "alt": "Statistics dashboard with purity trend and class distribution charts" }
+          {
+            "src": "/images/projects/brinex-detection.jpg",
+            "alt": "YOLOv8 inference frame with class-coloured bounding boxes and confidence scores"
+          },
+          {
+            "src": "/images/projects/brinex-batches.jpg",
+            "alt": "Batch quality assessment table with purity, whiteness and quality per batch"
+          },
+          {
+            "src": "/images/projects/brinex-analytics.jpg",
+            "alt": "Statistics dashboard with purity trend and class distribution charts"
+          }
         ],
         "sections": [
           {
@@ -197,11 +228,26 @@
         "period": "Jan 2025 - Feb 2026",
         "intro": "A self-service rental app for a Qatari micro-mobility operator, covering live-map vehicle discovery, unlock, in-app payment and wallet-based 30-minute and 1-hour ride passes, backed by an admin dashboard with live IoT fleet telemetry.",
         "meta": [
-          { "label": "Client", "value": "City Bikes & Segway" },
-          { "label": "Company", "value": "FocalDive" },
-          { "label": "Market", "value": "Qatar" }
+          {
+            "label": "Client",
+            "value": "City Bikes & Segway"
+          },
+          {
+            "label": "Company",
+            "value": "FocalDive"
+          },
+          {
+            "label": "Market",
+            "value": "Qatar"
+          }
         ],
-        "stack": ["Cross-platform mobile", "IoT telemetry", "In-app payments", "Wallets", "RTL / Arabic"],
+        "stack": [
+          "Cross-platform mobile",
+          "IoT telemetry",
+          "In-app payments",
+          "Wallets",
+          "RTL / Arabic"
+        ],
         "gallery": [],
         "sections": [
           {
@@ -226,11 +272,25 @@
         "period": "Oct 2025 - Jun 2026",
         "intro": "Two connected cross-platform apps, one for customers and one for delivery partners, on a shared backend: restaurant browsing, cart, secure checkout, live order tracking, rider assignment and run history.",
         "meta": [
-          { "label": "Company", "value": "FocalDive" },
-          { "label": "Role", "value": "Full-Stack Engineer" },
-          { "label": "Year", "value": "2026" }
+          {
+            "label": "Company",
+            "value": "FocalDive"
+          },
+          {
+            "label": "Role",
+            "value": "Full-Stack Engineer"
+          },
+          {
+            "label": "Year",
+            "value": "2026"
+          }
         ],
-        "stack": ["React Native", "NestJS", "PostgreSQL", "Real-time updates"],
+        "stack": [
+          "React Native",
+          "NestJS",
+          "PostgreSQL",
+          "Real-time updates"
+        ],
         "gallery": [],
         "sections": [
           {
@@ -255,11 +315,26 @@
         "period": "Mar 2026 - Present",
         "intro": "Molt replaces twice-daily manual poultry headcounts with continuous IP-camera monitoring, using DFCCNet density regression, automated threshold alerts and SMS and in-app notifications.",
         "meta": [
-          { "label": "Company", "value": "FocalDive" },
-          { "label": "Role", "value": "AI Engineer" },
-          { "label": "Status", "value": "In progress" }
+          {
+            "label": "Company",
+            "value": "FocalDive"
+          },
+          {
+            "label": "Role",
+            "value": "AI Engineer"
+          },
+          {
+            "label": "Status",
+            "value": "In progress"
+          }
         ],
-        "stack": ["DFCCNet", "Density regression", "IP cameras", "SMS alerts", "In-app notifications"],
+        "stack": [
+          "DFCCNet",
+          "Density regression",
+          "IP cameras",
+          "SMS alerts",
+          "In-app notifications"
+        ],
         "gallery": [],
         "sections": [
           {
@@ -284,11 +359,24 @@
         "period": "Apr 2026 - Present",
         "intro": "The patient-facing mobile app for a clinic queue system that digitises appointments and cuts physical waiting times, built from scratch in React Native.",
         "meta": [
-          { "label": "Company", "value": "FocalDive" },
-          { "label": "Role", "value": "Mobile App Developer" },
-          { "label": "Status", "value": "In progress" }
+          {
+            "label": "Company",
+            "value": "FocalDive"
+          },
+          {
+            "label": "Role",
+            "value": "Mobile App Developer"
+          },
+          {
+            "label": "Status",
+            "value": "In progress"
+          }
         ],
-        "stack": ["React Native", "Spring Boot", "REST APIs"],
+        "stack": [
+          "React Native",
+          "Spring Boot",
+          "REST APIs"
+        ],
         "gallery": [],
         "sections": [
           {
@@ -313,11 +401,26 @@
         "period": "Apr 2025 - Nov 2025",
         "intro": "One calendar for players and turf owners: location-based discovery with live availability and instant booking, plus an owner dashboard for slots, rates, discounts, payouts and month-on-month earnings.",
         "meta": [
-          { "label": "Company", "value": "FocalDive" },
-          { "label": "Role", "value": "Full-Stack Engineer" },
-          { "label": "Year", "value": "2025" }
+          {
+            "label": "Company",
+            "value": "FocalDive"
+          },
+          {
+            "label": "Role",
+            "value": "Full-Stack Engineer"
+          },
+          {
+            "label": "Year",
+            "value": "2025"
+          }
         ],
-        "stack": ["Next.js", "Full-stack", "Wallets", "Booking engine"],
+        "stack": [
+          "Next.js",
+          "NestJS",
+          "PostgreSQL",
+          "Wallets",
+          "Booking engine"
+        ],
         "gallery": [],
         "sections": [
           {
@@ -333,36 +436,105 @@
             "text": "Double bookings are prevented by design, and owners manage slots, pricing and earnings from one dashboard."
           }
         ]
+      },
+      {
+        "slug": "wrapitup",
+        "title": "WrapItUp",
+        "description": "Gift hamper purchasing and management platform.",
+        "category": "Web Platform",
+        "period": "Jan 2025 - May 2025",
+        "intro": "An online gift-hamper platform that replaces shop-to-shop buying. Users pick items, customise the box shape, contents and presentation, pay securely and track delivery, all in a few minutes.",
+        "meta": [
+          {
+            "label": "Type",
+            "value": "Gift e-commerce"
+          },
+          {
+            "label": "Role",
+            "value": "Full-Stack Engineer"
+          },
+          {
+            "label": "Year",
+            "value": "2025"
+          }
+        ],
+        "stack": [
+          "Next.js",
+          "Full-stack",
+          "Secure payments",
+          "Order tracking"
+        ],
+        "gallery": [],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Putting together a gift hamper meant going from shop to shop, with no easy way to customise the box or know when it would arrive."
+          },
+          {
+            "title": "Approach",
+            "text": "Designed curated entry points by relationship and occasion to narrow the catalogue quickly, integrated secure payment directly into the platform, and built order tracking in from the start."
+          },
+          {
+            "title": "Results",
+            "text": "Buyers go from picking items to a paid, trackable order in a few minutes, with less checkout drop-off and no follow-up calls to find out where an order is."
+          }
+        ]
       }
     ]
   },
-
   "socials": {
     "label": "Get in touch",
     "items": [
-      { "platform": "github", "label": "GitHub", "href": "https://github.com/arshartisan" },
-      { "platform": "linkedin", "label": "LinkedIn", "href": "https://linkedin.com/in/muhammed-arshaq" },
-      { "platform": "email", "label": "Email", "href": "mailto:arshartisan@gmail.com" }
+      {
+        "platform": "x",
+        "label": "X (Twitter)",
+        "href": "https://x.com/arshartisan"
+      },
+      {
+        "platform": "github",
+        "label": "GitHub",
+        "href": "https://github.com/arshartisan"
+      },
+      {
+        "platform": "linkedin",
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/muhammed-arshaq"
+      },
+      {
+        "platform": "email",
+        "label": "Email",
+        "href": "mailto:arshartisan@gmail.com"
+      }
     ]
   },
-
   "sideProjects": {
     "label": "Research & Recognition",
     "items": [
-      { "since": "May 2026", "title": "ICHORA 2026 (IEEE)", "subtitle": "Co-author, oral presentation in Ankara, Türkiye" },
-      { "since": "2025 - 2026", "title": "BrineX Research", "subtitle": "Final-year research, SLIIT (25-26J-431)" },
-      { "since": "2022 - 2026", "title": "Dean’s List ×4", "subtitle": "SLIIT, plus Scholarship Award" }
+      {
+        "since": "May 2026",
+        "title": "ICHORA 2026 (IEEE)",
+        "subtitle": "Co-author, oral presentation in Ankara, Türkiye"
+      },
+      {
+        "since": "2025 - 2026",
+        "title": "BrineX Research",
+        "subtitle": "Final-year research, SLIIT (25-26J-431)"
+      },
+      {
+        "since": "2022 - 2026",
+        "title": "Dean’s List ×4",
+        "subtitle": "SLIIT, plus Scholarship Award"
+      }
     ]
   },
-
-  "newsletter": {
-    "label": "Newsletter",
-    "placeholder": "name@email.com",
-    "action": "Sign Up",
-    "success": "Subscribed",
-    "invalid": "Enter a valid email"
+  "contact": {
+    "label": "Let’s Talk",
+    "text": "Have a project or a role in mind? My inbox is always open.",
+    "action": {
+      "label": "Contact Me",
+      "href": "mailto:arshartisan@gmail.com"
+    }
   },
-
   "testimonial": {
     "quote": "From Pond to Market: A Two-Stage AI Forecasting System for Salt Production Planning in Puttalam, Sri Lanka",
     "author": "IEEE ICHORA 2026",
@@ -370,10 +542,12 @@
     "avatar": "/images/me.png",
     "href": "https://ieeexplore.ieee.org/document/11537206"
   },
-
   "cv": {
     "label": "CV",
-    "view": { "label": "View", "href": "/cv.pdf" },
-    "download": { "label": "Download", "href": "/cv.pdf", "filename": "Muhammed_Arshaq_CV.pdf" }
+    "download": {
+      "label": "Download",
+      "href": "/cv.pdf",
+      "filename": "Muhammed_Arshaq_CV.pdf"
+    }
   }
 }
