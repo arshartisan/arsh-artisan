@@ -127,6 +127,7 @@
         "description": "Real-time salt crystal quality control with YOLOv8.",
         "category": "AI Research",
         "period": "2025 - 2026",
+        "icon": "/images/project-icons/brinex-icon.svg",
         "image": "/images/projects/brinex-dashboard.jpg",
         "intro": "BrineX is a four-module AI platform for climate-intelligent salt production, built by a four-member team as our final-year research at SLIIT. I designed and delivered its computer vision quality-control module: the first AI-based visual inspection system for tropical salt production, detecting pure salt, impure salt and foreign material in real time.",
         "meta": [
@@ -193,6 +194,7 @@
         "description": "E-scooter rental and fleet tracking app, Qatar.",
         "category": "Mobile & IoT",
         "period": "Jan 2025 - Feb 2026",
+        "icon": "/images/project-icons/citybikesegway-icon.svg",
         "intro": "A self-service rental app for a Qatari micro-mobility operator, covering live-map vehicle discovery, unlock, in-app payment and wallet-based 30-minute and 1-hour ride passes, backed by an admin dashboard with live IoT fleet telemetry.",
         "meta": [
           {
@@ -237,6 +239,7 @@
         "description": "End-to-end food ordering and delivery platform.",
         "category": "Mobile Platform",
         "period": "Oct 2025 - Jun 2026",
+        "icon": "/images/project-icons/weels-icon.svg",
         "intro": "Two connected cross-platform apps, one for customers and one for delivery partners, on a shared backend: restaurant browsing, cart, secure checkout, live order tracking, rider assignment and run history.",
         "meta": [
           {
@@ -280,6 +283,7 @@
         "description": "Real-time livestock monitoring with IP cameras.",
         "category": "Computer Vision",
         "period": "Mar 2026 - Present",
+        "icon": "/images/project-icons/molt_icon_white.svg",
         "intro": "Molt replaces twice-daily manual poultry headcounts with continuous IP-camera monitoring, using DFCCNet density regression, automated threshold alerts and SMS and in-app notifications.",
         "meta": [
           {
@@ -324,6 +328,7 @@
         "description": "Patient queue management mobile app.",
         "category": "Mobile App",
         "period": "Apr 2026 - Present",
+        "icon": "/images/project-icons/passque-icon.svg",
         "intro": "The patient-facing mobile app for a clinic queue system that digitises appointments and cuts physical waiting times, built from scratch in React Native.",
         "meta": [
           {
@@ -366,6 +371,7 @@
         "description": "Sports arena booking and management platform.",
         "category": "Web Platform",
         "period": "Apr 2025 - Nov 2025",
+        "icon": "/images/project-icons/bmp-icon.svg",
         "intro": "One calendar for players and turf owners: location-based discovery with live availability and instant booking, plus an owner dashboard for slots, rates, discounts, payouts and month-on-month earnings.",
         "meta": [
           {
@@ -410,6 +416,7 @@
         "description": "Gift hamper purchasing and management platform.",
         "category": "Web Platform",
         "period": "Jan 2025 - May 2025",
+        "icon": "/images/project-icons/wrapitup-icon.svg",
         "intro": "An online gift-hamper platform that replaces shop-to-shop buying. Users pick items, customise the box shape, contents and presentation, pay securely and track delivery, all in a few minutes.",
         "meta": [
           {

@@ -162,7 +162,7 @@ function ProjectLink({ link }: { link: { label: string; href: string } }) {
   );
 }
 
-/** Stand-in cover for projects without imagery: the title set large on a card surface with a dot grid. */
+/** Stand-in cover for projects without imagery: app icon and title set large on a card surface with a dot grid. */
 function TypeCover({ project }: { project: Project }) {
   return (
     <div
@@ -170,7 +170,19 @@ function TypeCover({ project }: { project: Project }) {
       className="relative flex aspect-4/3 w-full flex-col justify-between overflow-hidden rounded-card bg-card p-5 shadow-(--card-shadow) sm:aspect-video md:p-8"
     >
       <div className="absolute inset-0 bg-[radial-gradient(var(--line)_1px,transparent_1px)] bg-size-[18px_18px] mask-[radial-gradient(ellipse_at_center,black,transparent_75%)]" />
-      <p className="relative text-xs text-muted-foreground">{project.category}</p>
+      <div className="relative flex items-center gap-3">
+        {project.icon ? (
+          <Image
+            src={project.icon}
+            alt=""
+            width={96}
+            height={96}
+            unoptimized
+            className="image-outline size-10 rounded-lg object-cover md:size-12 md:rounded-xl"
+          />
+        ) : null}
+        <p className="text-xs text-muted-foreground">{project.category}</p>
+      </div>
       <p className="relative text-[clamp(2.5rem,12vw,9rem)] leading-none font-medium tracking-tighter text-balance">
         {project.title}
       </p>

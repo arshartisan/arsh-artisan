@@ -30,12 +30,23 @@ export function ProjectsCard({ projects, themePath }: { projects: Content["proje
   );
 }
 
-/** Round thumbnail; projects without imagery get a monogram so the list stays even. */
+/** Round thumbnail: the project's app icon, else its cover image, else a monogram. */
 export function ProjectThumb({ project, className }: { project: Project; className?: string }) {
   const base = "image-outline size-12 shrink-0 rounded-full sm:size-15";
+  const src = project.icon ?? project.image;
 
-  if (project.image) {
-    return <Image src={project.image} alt="" width={120} height={120} className={cn(base, "object-cover", className)} />;
+  if (src) {
+    // SVG icons skip the optimizer, which only handles raster formats by default.
+    return (
+      <Image
+        src={src}
+        alt=""
+        width={120}
+        height={120}
+        unoptimized={src.endsWith(".svg")}
+        className={cn(base, "object-cover", className)}
+      />
+    );
   }
 
   return (
