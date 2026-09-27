@@ -506,7 +506,6 @@
     "text": "Have a project or a role in mind? My inbox is always open.",
     "action": {
       "label": "Contact Me",
-      "openingLabel": "Opening email",
       "href": "mailto:arshartisan@gmail.com"
     }
   },
@@ -535,7 +534,6 @@
     "meta": "PDF · 2 pages",
     "download": {
       "label": "Download",
-      "openingLabel": "Opening CV",
       "href": "https://drive.google.com/file/d/1OliVRotjLtIBaJHvk84gotyl5-A2KY_V/view?usp=sharing"
     }
   }
