@@ -6,9 +6,8 @@ import { ThemeSync } from "./theme-sync";
 import { WidgetGrid } from "./widget-grid";
 import { AboutCard } from "./widgets/about-card";
 import { ClockCard } from "./widgets/clock-card";
+import { ContactCard } from "./widgets/contact-card";
 import { CVCard } from "./widgets/cv-card";
-import { FeaturedCard } from "./widgets/featured-card";
-import { NewsletterCard } from "./widgets/newsletter-card";
 import { ProjectsCard } from "./widgets/projects-card";
 import { SocialsCard } from "./widgets/socials-card";
 import { StatCard } from "./widgets/stat-card";
@@ -17,8 +16,11 @@ import { TestimonialCard } from "./widgets/testimonial-card";
 import { ExperienceCard, SideProjectsCard } from "./widgets/timeline-card";
 
 /**
- * Widget order matters: the grid auto-places in DOM order, which reproduces the
- * bento layout at 6 columns and collapses cleanly to 4 and 2.
+ * Widget order matters: the grid auto-places in DOM order. At 6 columns this gives
+ *   row 1:    Clock · Status · About       · Education
+ *   rows 2-3: Experience     · Projects    · Education / Research
+ *   row 4:    Contact · Quote · Get in touch · Stat · CV
+ * and collapses cleanly to 4 and 2 columns.
  */
 export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
   return (
@@ -38,13 +40,13 @@ export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
             <ClockCard time={theme.time} />
             <StatusCard status={theme.status} />
             <AboutCard about={theme.about} />
+            <ExperienceCard experience={content.education} tone="alt" />
             <ExperienceCard experience={content.experience} />
             <ProjectsCard projects={content.projects} themePath={theme.path} />
-            <SocialsCard socials={content.socials} />
-            <FeaturedCard featured={theme.featured} />
             <SideProjectsCard sideProjects={content.sideProjects} />
-            <NewsletterCard newsletter={content.newsletter} />
+            <ContactCard contact={content.contact} />
             <TestimonialCard testimonial={content.testimonial} />
+            <SocialsCard socials={content.socials} />
             <StatCard stat={theme.stat} />
             <CVCard cv={content.cv} />
           </WidgetGrid>

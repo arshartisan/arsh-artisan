@@ -8,7 +8,7 @@ type TimelineRow = {
   subtitle: string;
 };
 
-/** Shared layout for "Experience & Education" and "Side Projects". */
+/** Shared layout for "Experience", "Education" and "Research & Recognition". */
 function TimelineCard({
   label,
   rows,
@@ -42,16 +42,19 @@ function TimelineCard({
   );
 }
 
+/** Dated timeline (start to end); used for both Experience and Education. */
 export function ExperienceCard({
   experience,
+  tone = "default",
 }: {
   experience: { label: string; items: { start: string; end: string; title: string; subtitle: string }[] };
+  tone?: "default" | "alt";
 }) {
   return (
     <TimelineCard
       label={experience.label}
       span="2x2"
-      tone="alt"
+      tone={tone}
       rows={experience.items.map((item, i) => ({
         key: `${item.title}-${i}`,
         title: item.title,
