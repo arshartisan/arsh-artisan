@@ -38,6 +38,7 @@ export function FadeScroll({ children, className, label }: { children: ReactNode
         tabIndex={0}
         role="region"
         aria-label={label}
+        data-lenis-prevent
         className={cn("thin-scrollbar absolute inset-0 overflow-y-auto overscroll-contain pe-2 outline-none", className)}
       >
         {children}
