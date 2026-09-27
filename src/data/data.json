@@ -25,8 +25,8 @@
       },
       "time": {
         "label": "Time",
-        "location": "San Francisco",
-        "timezone": "America/Los_Angeles"
+        "location": "Colombo, LK",
+        "timezone": "Asia/Colombo"
       },
       "status": {
         "label": "Mode",
@@ -62,8 +62,8 @@
       },
       "time": {
         "label": "Time",
-        "location": "London, UK",
-        "timezone": "Europe/London"
+        "location": "Colombo, LK",
+        "timezone": "Asia/Colombo"
       },
       "status": {
         "label": "Mode",
@@ -99,8 +99,8 @@
       },
       "time": {
         "label": "Time",
-        "location": "Barcelona, ESP",
-        "timezone": "Europe/Madrid"
+        "location": "Colombo, LK",
+        "timezone": "Asia/Colombo"
       },
       "status": {
         "label": "Mode",
