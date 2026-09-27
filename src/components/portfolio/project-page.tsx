@@ -91,7 +91,11 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
                 >
                   <dt className="text-muted-foreground">{item.label}</dt>
                   <dd className="font-medium text-pretty md:text-end">
-                    {item.label === "Status" ? <StatusBadge value={item.value} /> : item.value}
+                    {item.label === "Status" ? (
+                      <StatusBadge value={item.value} />
+                    ) : (
+                      <CompanyValue value={item.value} logos={labels.companyLogos} theme={theme.id} />
+                    )}
                   </dd>
                 </div>
               ))}
@@ -209,6 +213,27 @@ function StatusBadge({ value }: { value: string }) {
         )}
         <span className="relative size-1.5 rounded-full bg-(--dot)" />
       </span>
+      {value}
+    </span>
+  );
+}
+
+/** Company name with its emblem, when we have one; picks the emblem made for the current theme. */
+function CompanyValue({
+  value,
+  logos,
+  theme,
+}: {
+  value: string;
+  logos: Record<string, Record<ThemeId, string>>;
+  theme: ThemeId;
+}) {
+  const logo = logos[value]?.[theme];
+  if (!logo) return value;
+
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      <Image src={logo} alt="" width={32} height={32} className="size-4 shrink-0 object-contain" />
       {value}
     </span>
   );

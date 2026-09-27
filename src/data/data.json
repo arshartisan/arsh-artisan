@@ -105,6 +105,12 @@
     "nextLabel": "Next Project",
     "viewLabel": "View more",
     "stackLabel": "Stack",
+    "companyLogos": {
+      "FocalDive": {
+        "dark": "/images/focaldive/emblem-on-dark.png",
+        "light": "/images/focaldive/emblem-on-light.png"
+      }
+    },
     "items": [
       {
         "slug": "brinex-vision",
