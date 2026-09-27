@@ -1,0 +1,217 @@
+{
+  "site": {
+    "title": "FF Widgets — Portfolio",
+    "description": "A widget-style personal portfolio: experience, projects, side projects and contact in one glanceable grid.",
+    "copyright": "FF Widgets",
+    "credit": {
+      "label": "Created by",
+      "text": "Favorit × Frame",
+      "href": "https://framer.com"
+    },
+    "primaryAction": {
+      "label": "Buy Template",
+      "href": "https://framer.com/marketplace"
+    },
+    "themeSwitcher": {
+      "label": "Switch Theme"
+    }
+  },
+
+  "themes": [
+    {
+      "id": "dark",
+      "label": "Dark",
+      "path": "/",
+      "profile": {
+        "name": "Francis Lafayette",
+        "role": "Creative Director",
+        "avatar": "/images/avatar-dark.jpg"
+      },
+      "time": {
+        "label": "Time",
+        "location": "San Francisco",
+        "timezone": "America/Los_Angeles"
+      },
+      "status": {
+        "label": "Mode",
+        "indicator": "#34c759",
+        "text": "Available for freelance design projects. Hit me up for a collab 🦾",
+        "action": { "label": "Contact Me", "href": "mailto:hello@example.com" }
+      },
+      "about": {
+        "label": "About",
+        "name": "Maximilian Stone",
+        "text": "I’m Maximilian Stone, an adventurous Creative Director based in the vibrant city of San Francisco. With a keen eye for aesthetics, a passion for innovation, and a drive for pushing boundaries, I strive to create visually captivating designs that leave a lasting impact. Let’s collaborate and bring your creative visions to life."
+      },
+      "featured": {
+        "label": "Latest Work",
+        "linkLabel": "099.supply",
+        "href": "https://099.supply",
+        "image": "/images/work-dark.jpg",
+        "imageAlt": "Black smartphone with the 099 logo standing on a granite block"
+      },
+      "stat": {
+        "label": "Years of Experience",
+        "value": 13
+      }
+    },
+    {
+      "id": "light",
+      "label": "Light",
+      "path": "/light",
+      "profile": {
+        "name": "Isabella Clarke",
+        "role": "Founder Arktis",
+        "avatar": "/images/avatar-light.jpg"
+      },
+      "time": {
+        "label": "Time",
+        "location": "London, UK",
+        "timezone": "Europe/London"
+      },
+      "status": {
+        "label": "Mode",
+        "indicator": "#fbbf24",
+        "text": "Out of office. Chasing waves and soaking up sunrays 🌊",
+        "action": { "label": "Contact Me", "href": "mailto:hello@example.com" }
+      },
+      "about": {
+        "label": "About",
+        "name": "Isabella Clarke",
+        "text": "Hello. I’m Isabella Clarke, a visionary Brand Founder hailing from the dynamic city of London. With a deep understanding of the power of branding, I am dedicated to creating compelling brand experiences that resonate with audiences and drive meaningful connections. Let’s embark on a transformative journey together."
+      },
+      "featured": {
+        "label": "Latest Product",
+        "linkLabel": "Explore",
+        "href": "https://example.com",
+        "image": "/images/work-light.jpg",
+        "imageAlt": "White Arktis pump bottle on a speckled stone ledge"
+      },
+      "stat": {
+        "label": "Days until next launch",
+        "value": 25
+      }
+    },
+    {
+      "id": "brutal",
+      "label": "Brutal",
+      "path": "/brutal",
+      "profile": {
+        "name": "Xavier Vega",
+        "role": "UX Designer",
+        "avatar": "/images/avatar-brutal.jpg"
+      },
+      "time": {
+        "label": "Time",
+        "location": "Barcelona, ESP",
+        "timezone": "Europe/Madrid"
+      },
+      "status": {
+        "label": "Mode",
+        "indicator": "#86efac",
+        "text": "Hiring. Looking for a talented UX Design Companion 👾",
+        "action": { "label": "Contact Me", "href": "mailto:hello@example.com" }
+      },
+      "about": {
+        "label": "About",
+        "name": "Xavier Vega",
+        "text": "Hey, I’m Xavier Vega, a spirited UX Designer from the creative hub of Barcelona. With an affinity for all things digital, I thrive on crafting intuitive and delightful user experiences. Let’s embark on a journey to create innovative designs that blend functionality with a touch of whimsy. Ready to make some digital magic?"
+      },
+      "featured": {
+        "label": "Latest Project",
+        "linkLabel": "Explore",
+        "href": "https://example.com",
+        "image": "/images/work-brutal.jpg",
+        "imageAlt": "Laptop showing a giant pixel cursor on a yellow screen"
+      },
+      "stat": {
+        "label": "Awwwards SOTD",
+        "value": 12
+      }
+    }
+  ],
+
+  "experience": {
+    "label": "Experience & Education",
+    "items": [
+      {
+        "start": "2022",
+        "end": "Now",
+        "title": "Creative Studio Owner",
+        "subtitle": "Self-employed at my own creative studio, delivering innovative design solutions and giving value to your brand experience."
+      },
+      { "start": "2020", "end": "2022", "title": "Nike Headquarters", "subtitle": "Designer & Creative Director" },
+      { "start": "2018", "end": "2020", "title": "Spotify", "subtitle": "Designer & Art Director" },
+      { "start": "2016", "end": "2018", "title": "Apple", "subtitle": "Product Designer" },
+      { "start": "2014", "end": "2016", "title": "Royal Academy of Arts", "subtitle": "Graduate Master’s Degree" },
+      { "start": "2012", "end": "2016", "title": "Zurich University of Arts", "subtitle": "Visual Communication" },
+      { "start": "2011", "end": "2012", "title": "Vogue France", "subtitle": "Graphic Designer" },
+      { "start": "2010", "end": "2011", "title": "Vignelli Associates", "subtitle": "Internship" },
+      { "start": "2010", "end": "2011", "title": "Norm Zurich", "subtitle": "Internship" }
+    ]
+  },
+
+  "projects": {
+    "label": "Projects",
+    "items": [
+      {
+        "title": "Fusion Pro Presentation",
+        "description": "I’ve come up with something truly unique.",
+        "image": "/images/project-fusion.jpg",
+        "href": "#"
+      },
+      {
+        "title": "New Publication",
+        "description": "Read out my new article on the impact of AI.",
+        "image": "/images/project-publication.jpg",
+        "href": "#"
+      },
+      {
+        "title": "Swoosh Playground",
+        "description": "Experimental project for Nike Shoe Launch.",
+        "image": "/images/project-swoosh.jpg",
+        "href": "#"
+      }
+    ]
+  },
+
+  "socials": {
+    "label": "Get in touch",
+    "items": [
+      { "platform": "x", "label": "X (Twitter)", "href": "https://x.com" },
+      { "platform": "linkedin", "label": "LinkedIn", "href": "https://linkedin.com" },
+      { "platform": "instagram", "label": "Instagram", "href": "https://instagram.com" },
+      { "platform": "email", "label": "Email", "href": "mailto:hello@example.com" }
+    ]
+  },
+
+  "sideProjects": {
+    "label": "Side Projects",
+    "items": [
+      { "since": "Since 2023", "title": "Framer", "subtitle": "Official Partner" },
+      { "since": "Since 2021", "title": "Awwwards", "subtitle": "Jury Member" },
+      { "since": "Since 2019", "title": "ADC Club Global", "subtitle": "Jury Member" }
+    ]
+  },
+
+  "newsletter": {
+    "label": "Newsletter",
+    "placeholder": "name@email.com",
+    "action": "Sign Up",
+    "success": "Subscribed",
+    "invalid": "Enter a valid email"
+  },
+
+  "testimonial": {
+    "quote": "We were captivated by an extraordinary vision, reshaping our brand with unparalleled creativity.",
+    "author": "Ava Montgomery",
+    "role": "CMO, Apple",
+    "avatar": "/images/testimonial.jpg"
+  },
+
+  "cv": {
+    "label": "CV",
+    "view": { "label": "View", "href": "/cv.pdf" },
+    "download": { "label": "Download", "href": "/cv.pdf", "filename": "cv.pdf" }
+  }
+}

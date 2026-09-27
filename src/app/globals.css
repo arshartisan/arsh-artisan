@@ -1,26 +1,187 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is([data-theme="dark"] *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-inter);
+
+  /* shadcn tokens, resolved from the active widget theme */
+  --color-background: var(--page);
+  --color-foreground: var(--fg);
+  --color-card: var(--card);
+  --color-card-foreground: var(--fg);
+  --color-popover: var(--tooltip);
+  --color-popover-foreground: var(--tooltip-fg);
+  --color-primary: var(--btn);
+  --color-primary-foreground: var(--btn-fg);
+  --color-secondary: var(--item);
+  --color-secondary-foreground: var(--fg);
+  --color-muted: var(--item);
+  --color-muted-foreground: var(--muted);
+  --color-accent: var(--item-hover);
+  --color-accent-foreground: var(--fg);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-border: var(--line);
+  --color-input: var(--line);
+  --color-ring: var(--muted);
+
+  /* widget tokens */
+  --color-page: var(--page);
+  --color-card-alt: var(--card-alt);
+  --color-item: var(--item);
+  --color-item-hover: var(--item-hover);
+  --color-fg: var(--fg);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-btn: var(--btn);
+  --color-btn-fg: var(--btn-fg);
+  --color-btn-hover: var(--btn-hover);
+  --color-field: var(--field);
+  --color-tooltip: var(--tooltip);
+  --color-tooltip-fg: var(--tooltip-fg);
+
+  --radius-card: 14px;
+  --radius-item: 4px;
+
+  /* Strong curves from emil-design-eng; better-ui cross-fade curve */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-fade: cubic-bezier(0.2, 0, 0, 1);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ───────────────────────── Themes ───────────────────────── */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #161616;
+  --card: #1e1e1e;
+  --card-alt: #1e1e1e;
+  --item: oklch(0 0 0 / 0.14);
+  --item-hover: oklch(1 0 0 / 0.035);
+  --fg: #ffffff;
+  --muted: oklch(1 0 0 / 0.5);
+  --faint: oklch(1 0 0 / 0.28);
+  --line: oklch(1 0 0 / 0.12);
+  --line-soft: oklch(1 0 0 / 0.16);
+  --card-shadow: 0 0 0 1px oklch(1 0 0 / 0.12);
+  --btn: #292929;
+  --btn-fg: #ffffff;
+  --btn-hover: #333333;
+  --btn-shadow: none;
+  --field: #161616;
+  --field-shadow: none;
+  --tooltip: #292929;
+  --tooltip-fg: #ffffff;
+  --image-outline: oklch(1 0 0 / 0.1);
+  --media-fg: #ffffff;
+  --media-line: oklch(1 0 0 / 0.2);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --page: #f4f4f4;
+  --card: #ffffff;
+  --card-alt: #ffffff;
+  --item: #f4f4f4;
+  --item-hover: #ededed;
+  --fg: #000000;
+  --muted: oklch(0 0 0 / 0.5);
+  --faint: oklch(0 0 0 / 0.28);
+  --line: oklch(0 0 0 / 0.12);
+  --line-soft: oklch(0 0 0 / 0.4);
+  --card-shadow:
+    0 0 0 1px oklch(0 0 0 / 0.08), 0 1px 2px -1px oklch(0 0 0 / 0.06),
+    0 2px 4px 0 oklch(0 0 0 / 0.03);
+  --btn: #ffffff;
+  --btn-fg: #000000;
+  --btn-hover: #f4f4f4;
+  --btn-shadow: 0 0 0 1px oklch(0 0 0 / 0.14);
+  --field: #ffffff;
+  --field-shadow: 0 0 0 1px oklch(0 0 0 / 0.14);
+  --tooltip: #1e1e1e;
+  --tooltip-fg: #ffffff;
+  --image-outline: oklch(0 0 0 / 0.1);
+  --media-fg: #ffffff;
+  --media-line: oklch(1 0 0 / 0.35);
+}
+
+[data-theme="brutal"] {
+  color-scheme: light;
+  --page: #f1d05b;
+  --card: #fbeda6;
+  --card-alt: #ffffff;
+  --item: #ffffff;
+  --item-hover: #fffdf2;
+  --fg: #000000;
+  --muted: oklch(0 0 0 / 0.5);
+  --faint: oklch(0 0 0 / 0.3);
+  --line: #000000;
+  --line-soft: oklch(0 0 0 / 0.55);
+  --card-shadow: 0 0 0 1px #000000, 4px 4px 0 1px #000000;
+  --btn: #000000;
+  --btn-fg: #ffffff;
+  --btn-hover: #262626;
+  --btn-shadow: none;
+  --field: #ffffff;
+  --field-shadow: 0 0 0 1px #000000;
+  --tooltip: #000000;
+  --tooltip-fg: #ffffff;
+  --image-outline: oklch(0 0 0 / 0.1);
+  --media-fg: #ffffff;
+  --media-line: oklch(1 0 0 / 0.3);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    background-color: var(--page);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-page text-fg;
+  }
+  ::selection {
+    background: var(--fg);
+    color: var(--page);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes status-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  80%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  /* better-ui: 1px low-opacity outline so images keep a consistent edge */
+  .image-outline {
+    outline: 1px solid var(--image-outline);
+    outline-offset: -1px;
+  }
+
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--faint) transparent;
+  }
 }

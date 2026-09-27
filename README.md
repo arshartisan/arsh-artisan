@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FF Widgets — Portfolio
 
-## Getting Started
+A widget-grid ("bento") portfolio built with Next.js 16, shadcn/ui (Base UI), Tailwind CSS v4 and Framer Motion. It ships three themes, each on its own route:
 
-First, run the development server:
+| Route     | Theme  |
+| --------- | ------ |
+| `/`       | Dark   |
+| `/light`  | Light  |
+| `/brutal` | Brutal |
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Editing content
+
+**All content lives in [`src/data/data.json`](src/data/data.json).** Nothing is hard-coded in the components.
+
+- `site`: page title and description, footer, the header button, and the theme switcher label.
+- `themes[]`: the per-theme persona. That covers the profile, clock (`timezone` is an IANA zone such as `Europe/London`), status, about text, featured work, and the stat counter. The `path` field sets the route. Add or remove themes here; the matching token block also needs to exist in `globals.css`.
+- `experience`, `projects`, `socials`, `sideProjects`, `newsletter`, `testimonial`, `cv`: content shared by every theme.
+
+Images live in `public/images/`, and the CV is `public/cv.pdf`. The images are the template's placeholders, so replace them with your own.
+
+The newsletter form validates the email address on the client and shows a success state. To actually collect addresses, connect it to your provider in `onSubmit` in `src/components/portfolio/widgets/newsletter-card.tsx`.
+
+## Structure
+
+```
+src/
+  data/data.json                 ← single source of content
+  lib/content.ts                 ← typed accessors over data.json
+  lib/motion.ts                  ← shared easing / variants
+  app/page.tsx, app/[theme]/     ← routes (statically generated)
+  components/portfolio/          ← header, footer, grid, card shell, theme switcher
+  components/portfolio/widgets/  ← one file per widget
+  components/ui/                 ← shadcn primitives
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Theme colors are CSS custom properties keyed on `[data-theme]` in `src/app/globals.css`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design skills
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The `better-ui` and `emil-design-eng` skills are installed in `.claude/skills/`. The UI follows them in these ways:
 
-## Learn More
+- Strong custom ease-out curves and a staggered entrance of opacity, blur and translate.
+- `scale(0.96)` when buttons are pressed, and every transition names its properties explicitly.
+- Transitions are switched off during a theme swap, and the switcher opens with a `clip-path` reveal.
+- Label and icon changes use a blur crossfade, and hover effects only apply to devices with a fine pointer.
+- Cards use a shadow instead of a border, and images get a 1px outline.
+- Motion is reduced when the user asks for it.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev     # http://localhost:3000
+npm run build
+npm run lint
+```
