@@ -47,7 +47,7 @@ export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
             <ContactCard contact={content.contact} />
             <TestimonialCard testimonial={content.testimonial} />
             <SocialsCard socials={content.socials} />
-            <StatCard stat={theme.stat} />
+            <StatCard stats={content.stats} />
             <CVCard cv={content.cv} />
           </WidgetGrid>
         </main>

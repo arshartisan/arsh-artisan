@@ -35,10 +35,6 @@
         "label": "About",
         "name": "Muhammed Arshaq",
         "text": "I’m Muhammed Arshaq, a full-stack software engineer from Puttalam, Sri Lanka with 5 years of shipping web, mobile and AI-enabled products for startups and SMEs across Sri Lanka, the GCC and beyond. As co-founder of FocalDive, I take products from first requirements to production."
-      },
-      "stat": {
-        "label": "Years of Experience",
-        "value": 5
       }
     },
     {
@@ -68,10 +64,6 @@
         "label": "About",
         "name": "Muhammed Arshaq",
         "text": "Hi, I’m Arshaq. I co-founded FocalDive, a software agency building web, mobile, booking, e-commerce, SaaS and AI products. I lead delivery end to end: requirements, architecture, real-time features, payments and releases, and I mentor the junior developers on our team."
-      },
-      "stat": {
-        "label": "Client Projects Led",
-        "value": 15
       }
     }
   ],
@@ -531,6 +523,19 @@
     "role": "Published on IEEE Xplore",
     "avatar": "/images/me.png",
     "href": "https://ieeexplore.ieee.org/document/11537206"
+  },
+  "stats": {
+    "interval": 4000,
+    "items": [
+      {
+        "label": "Years of Experience",
+        "value": 5
+      },
+      {
+        "label": "Client Projects Completed",
+        "value": 15
+      }
+    ]
   },
   "cv": {
     "label": "CV",
