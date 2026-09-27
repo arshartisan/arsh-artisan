@@ -516,6 +516,7 @@
   },
   "cv": {
     "label": "CV",
+    "meta": "PDF · 2 pages",
     "download": {
       "label": "Download",
       "href": "/cv.pdf",
