@@ -12,7 +12,7 @@ export function StatusCard({ status }: { status: Theme["status"] }) {
           className="relative flex size-2"
           style={{ "--indicator": status.indicator } as CSSProperties}
         >
-          <span className="absolute inset-0 rounded-full bg-(--indicator) opacity-60 motion-safe:animate-[status-ping_2.4s_cubic-bezier(0.23,1,0.32,1)_infinite]" />
+          <span className="absolute inset-0 rounded-full bg-(--indicator) opacity-60 animate-[status-ping_2.4s_cubic-bezier(0.23,1,0.32,1)_infinite]" />
           <span className="relative size-2 rounded-full bg-(--indicator)" />
           <span className="sr-only">Status</span>
         </span>
