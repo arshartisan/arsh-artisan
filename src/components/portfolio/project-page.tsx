@@ -58,7 +58,7 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
               height={900}
               priority
               sizes="(min-width: 1188px) 1124px, 100vw"
-              className="image-outline aspect-4/3 w-full rounded-card object-cover sm:aspect-video"
+              className="image-outline aspect-video w-full rounded-card object-cover"
             />
           ) : (
             <TypeCover project={project} />
