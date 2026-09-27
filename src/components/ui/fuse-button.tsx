@@ -4,8 +4,8 @@
  * Fuse Button, adapted from React Bits (https://reactbits.dev/micro/fuse-button).
  * Press to arm: the label crossfades to the undo label while a fuse burns around the
  * outline; when it runs out the action commits, and Undo or Escape cancels it.
- * Changes from upstream: Lucide icons instead of Hugeicons, an `xs` size, and a
- * `fullWidth` option so it can stand in for the widgets' pill buttons.
+ * Changes from upstream: Lucide icons instead of Hugeicons, an `xs` size, a
+ * `fullWidth` option so it can stand in for the widgets' pill buttons, and `undoIcon`.
  */
 
 import { Check, Undo2 } from "lucide-react";
@@ -20,6 +20,8 @@ export type FuseSize = "xs" | "sm" | "md" | "lg";
 export interface FuseButtonProps {
   label?: string;
   undoLabel?: string;
+  /** Icon on the armed (undo) face; defaults to an undo arrow. */
+  undoIcon?: ReactNode;
   doneLabel?: string;
   icon?: ReactNode;
   color?: string;
@@ -69,6 +71,7 @@ const iconBox = "inline-flex h-[var(--fb-icon)] w-[var(--fb-icon)] [&>svg]:h-ful
 export function FuseButton({
   label = "Archive",
   undoLabel = "Undo",
+  undoIcon,
   doneLabel = "Archived",
   icon,
   color = "#f5f5f5",
@@ -288,7 +291,7 @@ export function FuseButton({
           className={`${iconBox} [transform:rotate(-70deg)] [transition:transform_var(--fb-fade)_var(--fb-ease-out)] group-data-[phase=armed]:[transform:rotate(0deg)] motion-reduce:transition-none motion-reduce:[transform:none]`}
           aria-hidden="true"
         >
-          <Undo2 strokeWidth={2} />
+          {undoIcon ?? <Undo2 strokeWidth={2} />}
         </span>
         {undoLabel}
         {fuse !== "outline" ? line : null}

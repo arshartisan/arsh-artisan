@@ -506,9 +506,7 @@
     "text": "Have a project or a role in mind? My inbox is always open.",
     "action": {
       "label": "Contact Me",
-      "cancelLabel": "Cancel",
-      "doneLabel": "Opening your email app",
-      "delay": 2000,
+      "openingLabel": "Opening email",
       "href": "mailto:arshartisan@gmail.com"
     }
   },
@@ -537,6 +535,7 @@
     "meta": "PDF · 2 pages",
     "download": {
       "label": "Download",
+      "openingLabel": "Opening CV",
       "href": "https://drive.google.com/file/d/1OliVRotjLtIBaJHvk84gotyl5-A2KY_V/view?usp=sharing"
     }
   }

@@ -1,11 +1,14 @@
 "use client";
 
-import { Mail } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { FuseButton } from "@/components/ui/fuse-button";
 import type { Content } from "@/lib/content";
 import { WidgetCard } from "../widget-card";
 
-/** Press "Contact Me": a fuse burns while it offers Cancel, then the mail client opens. */
+/**
+ * "Contact Me" opens the mail client on press (inside the click, so the browser
+ * allows it); the fuse then burns as a brief "Opening email" confirmation.
+ */
 export function ContactCard({ contact }: { contact: Content["contact"] }) {
   return (
     <WidgetCard label={contact.label} bodyClassName="justify-end gap-2.5">
@@ -15,13 +18,14 @@ export function ContactCard({ contact }: { contact: Content["contact"] }) {
         size="xs"
         radius={14}
         label={contact.action.label}
-        undoLabel={contact.action.cancelLabel}
-        doneLabel={contact.action.doneLabel}
+        undoLabel={contact.action.openingLabel}
+        doneLabel={contact.action.openingLabel}
         icon={<Mail strokeWidth={1.5} />}
+        undoIcon={<Send strokeWidth={1.5} />}
         color="var(--btn-fg)"
         background="var(--btn)"
-        undoWindow={contact.action.delay}
-        commitOn="fuseEnd"
+        undoWindow={1500}
+        commitOn="press"
         onCommit={() => {
           window.location.href = contact.action.href;
         }}
