@@ -1,33 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getProjectHref, type Content } from "@/lib/content";
+import { getProjectHref, type Content, type Project } from "@/lib/content";
+import { cn } from "@/lib/utils";
+import { FadeScroll } from "../fade-scroll";
 import { WidgetCard } from "../widget-card";
 
 export function ProjectsCard({ projects, themePath }: { projects: Content["projects"]; themePath: string }) {
   return (
-    <WidgetCard label={projects.label} span="2x2" bodyClassName="justify-end pt-2.5">
-      <ul className="flex flex-col gap-2.5">
-        {projects.items.map((project) => (
-          <li key={project.slug}>
-            <Link
-              href={getProjectHref(themePath, project.slug)}
-              className="flex items-center gap-4 rounded-item bg-item p-2.5 transition-colors duration-150 ease-out outline-none focus-visible:ring-2 focus-visible:ring-ring [@media(hover:hover)_and_(pointer:fine)]:hover:bg-item-hover"
-            >
-              <Image
-                src={project.image}
-                alt=""
-                width={120}
-                height={120}
-                className="image-outline size-12 shrink-0 rounded-full object-cover sm:size-15"
-              />
-              <span className="min-w-0 leading-[1.45]">
-                <span className="block truncate font-medium">{project.title}</span>
-                <span className="line-clamp-2 block text-pretty text-muted-foreground">{project.description}</span>
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <WidgetCard label={projects.label} span="2x2" bodyClassName="pt-2.5">
+      <FadeScroll label={projects.label}>
+        <ul className="flex flex-col gap-2.5">
+          {projects.items.map((project) => (
+            <li key={project.slug}>
+              <Link
+                href={getProjectHref(themePath, project.slug)}
+                className="flex items-center gap-4 rounded-item bg-item p-2.5 transition-colors duration-150 ease-out outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset [@media(hover:hover)_and_(pointer:fine)]:hover:bg-item-hover"
+              >
+                <ProjectThumb project={project} />
+                <span className="min-w-0 leading-[1.45]">
+                  <span className="block truncate font-medium">{project.title}</span>
+                  <span className="line-clamp-2 block text-pretty text-muted-foreground">{project.description}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </FadeScroll>
     </WidgetCard>
+  );
+}
+
+/** Round thumbnail; projects without imagery get a monogram so the list stays even. */
+export function ProjectThumb({ project, className }: { project: Project; className?: string }) {
+  const base = "image-outline size-12 shrink-0 rounded-full sm:size-15";
+
+  if (project.image) {
+    return <Image src={project.image} alt="" width={120} height={120} className={cn(base, "object-cover", className)} />;
+  }
+
+  return (
+    <span
+      aria-hidden="true"
+      className={cn(base, "flex items-center justify-center bg-btn text-sm font-medium text-btn-fg", className)}
+    >
+      {project.title.slice(0, 2)}
+    </span>
   );
 }

@@ -1,8 +1,8 @@
 {
   "site": {
-    "title": "FF Widgets — Portfolio",
-    "description": "A widget-style personal portfolio: experience, projects, side projects and contact in one glanceable grid.",
-    "copyright": "FF Widgets",
+    "title": "Muhammed Arshaq - Full-Stack Software Engineer",
+    "description": "Full-stack software engineer from Sri Lanka building web, mobile and AI-enabled products. Co-founder of FocalDive, BSc (Hons) Software Engineering, SLIIT.",
+    "copyright": "Muhammed Arshaq",
     "credit": {
       "label": "Created by",
       "text": "Favorit × Frame",
@@ -19,36 +19,36 @@
       "label": "Dark",
       "path": "/",
       "profile": {
-        "name": "Francis Lafayette",
-        "role": "Creative Director",
-        "avatar": "/images/avatar-dark.jpg"
+        "name": "Muhammed Arshaq",
+        "role": "Full-Stack Software Engineer",
+        "avatar": "/images/me.png"
       },
       "time": {
         "label": "Time",
-        "location": "Colombo, LK",
+        "location": "Puttalam, LK",
         "timezone": "Asia/Colombo"
       },
       "status": {
         "label": "Mode",
         "indicator": "#34c759",
-        "text": "Available for freelance design projects. Hit me up for a collab 🦾",
-        "action": { "label": "Contact Me", "href": "mailto:hello@example.com" }
+        "text": "Open to full-stack, mobile and AI engineering roles. Let’s build something that ships 🚀",
+        "action": { "label": "Contact Me", "href": "mailto:arshartisan@gmail.com" }
       },
       "about": {
         "label": "About",
-        "name": "Maximilian Stone",
-        "text": "I’m Maximilian Stone, an adventurous Creative Director based in the vibrant city of San Francisco. With a keen eye for aesthetics, a passion for innovation, and a drive for pushing boundaries, I strive to create visually captivating designs that leave a lasting impact. Let’s collaborate and bring your creative visions to life."
+        "name": "Muhammed Arshaq",
+        "text": "I’m Muhammed Arshaq, a full-stack software engineer from Puttalam, Sri Lanka with 5+ years of shipping web, mobile and AI-enabled products for startups and SMEs across Sri Lanka, the GCC and beyond. As co-founder of FocalDive, I take products from first requirements to production."
       },
       "featured": {
-        "label": "Latest Work",
-        "linkLabel": "099.supply",
-        "href": "https://099.supply",
-        "image": "/images/work-dark.jpg",
-        "imageAlt": "Black smartphone with the 099 logo standing on a granite block"
+        "label": "Latest Research",
+        "linkLabel": "BrineX Vision",
+        "href": "/projects/brinex-vision",
+        "image": "/images/projects/brinex-dashboard.jpg",
+        "imageAlt": "BrineX Vision dashboard detecting pure, impure and unwanted salt crystals on a live camera feed"
       },
       "stat": {
         "label": "Years of Experience",
-        "value": 13
+        "value": 5
       }
     },
     {
@@ -56,36 +56,36 @@
       "label": "Light",
       "path": "/light",
       "profile": {
-        "name": "Isabella Clarke",
-        "role": "Founder Arktis",
-        "avatar": "/images/avatar-light.jpg"
+        "name": "Muhammed Arshaq",
+        "role": "Co-Founder, FocalDive",
+        "avatar": "/images/me.png"
       },
       "time": {
         "label": "Time",
-        "location": "Colombo, LK",
+        "location": "Puttalam, LK",
         "timezone": "Asia/Colombo"
       },
       "status": {
         "label": "Mode",
         "indicator": "#fbbf24",
-        "text": "Out of office. Chasing waves and soaking up sunrays 🌊",
-        "action": { "label": "Contact Me", "href": "mailto:hello@example.com" }
+        "text": "Building at FocalDive. Taking on a few new client projects this quarter 🛠️",
+        "action": { "label": "Contact Me", "href": "mailto:arshartisan@gmail.com" }
       },
       "about": {
         "label": "About",
-        "name": "Isabella Clarke",
-        "text": "Hello. I’m Isabella Clarke, a visionary Brand Founder hailing from the dynamic city of London. With a deep understanding of the power of branding, I am dedicated to creating compelling brand experiences that resonate with audiences and drive meaningful connections. Let’s embark on a transformative journey together."
+        "name": "Muhammed Arshaq",
+        "text": "Hi, I’m Arshaq. I co-founded FocalDive, a software agency building web, mobile, booking, e-commerce, SaaS and AI products. I lead delivery end to end: requirements, architecture, real-time features, payments and releases, and I mentor the junior developers on our team."
       },
       "featured": {
-        "label": "Latest Product",
-        "linkLabel": "Explore",
-        "href": "https://example.com",
-        "image": "/images/work-light.jpg",
-        "imageAlt": "White Arktis pump bottle on a speckled stone ledge"
+        "label": "Latest Research",
+        "linkLabel": "BrineX Vision",
+        "href": "/light/projects/brinex-vision",
+        "image": "/images/projects/brinex-batches.jpg",
+        "imageAlt": "BrineX batch quality table with purity, whiteness and quality scores per batch"
       },
       "stat": {
-        "label": "Days until next launch",
-        "value": 25
+        "label": "Client Projects Led",
+        "value": 15
       }
     },
     {
@@ -93,36 +93,36 @@
       "label": "Brutal",
       "path": "/brutal",
       "profile": {
-        "name": "Xavier Vega",
-        "role": "UX Designer",
-        "avatar": "/images/avatar-brutal.jpg"
+        "name": "Muhammed Arshaq",
+        "role": "AI & Computer Vision",
+        "avatar": "/images/me.png"
       },
       "time": {
         "label": "Time",
-        "location": "Colombo, LK",
+        "location": "Puttalam, LK",
         "timezone": "Asia/Colombo"
       },
       "status": {
         "label": "Mode",
         "indicator": "#86efac",
-        "text": "Hiring. Looking for a talented UX Design Companion 👾",
-        "action": { "label": "Contact Me", "href": "mailto:hello@example.com" }
+        "text": "Training models by day, shipping microservices by night. Ask me about YOLOv8 👾",
+        "action": { "label": "Contact Me", "href": "mailto:arshartisan@gmail.com" }
       },
       "about": {
         "label": "About",
-        "name": "Xavier Vega",
-        "text": "Hey, I’m Xavier Vega, a spirited UX Designer from the creative hub of Barcelona. With an affinity for all things digital, I thrive on crafting intuitive and delightful user experiences. Let’s embark on a journey to create innovative designs that blend functionality with a touch of whimsy. Ready to make some digital magic?"
+        "name": "Muhammed Arshaq",
+        "text": "I build AI into real products. My final-year research at SLIIT delivered BrineX Vision, a real-time computer vision system that grades salt crystals with over 99% detection accuracy on CPU-only hardware, and I co-authored an IEEE paper presented at ICHORA 2026."
       },
       "featured": {
-        "label": "Latest Project",
-        "linkLabel": "Explore",
-        "href": "https://example.com",
-        "image": "/images/work-brutal.jpg",
-        "imageAlt": "Laptop showing a giant pixel cursor on a yellow screen"
+        "label": "Latest Research",
+        "linkLabel": "BrineX Vision",
+        "href": "/brutal/projects/brinex-vision",
+        "image": "/images/projects/brinex-detection.jpg",
+        "imageAlt": "YOLOv8 live inference frame with bounding boxes around pure, impure and unwanted objects"
       },
       "stat": {
-        "label": "Awwwards SOTD",
-        "value": 12
+        "label": "Dean’s List Awards",
+        "value": 4
       }
     }
   ],
@@ -131,19 +131,20 @@
     "label": "Experience & Education",
     "items": [
       {
-        "start": "2022",
+        "start": "2021",
         "end": "Now",
-        "title": "Creative Studio Owner",
-        "subtitle": "Self-employed at my own creative studio, delivering innovative design solutions and giving value to your brand experience."
+        "title": "FocalDive (Pvt) Ltd",
+        "subtitle": "Co-Founder & Full-Stack Software Engineer. Web, mobile and AI products for clients in Sri Lanka, the GCC and global markets."
       },
-      { "start": "2020", "end": "2022", "title": "Nike Headquarters", "subtitle": "Designer & Creative Director" },
-      { "start": "2018", "end": "2020", "title": "Spotify", "subtitle": "Designer & Art Director" },
-      { "start": "2016", "end": "2018", "title": "Apple", "subtitle": "Product Designer" },
-      { "start": "2014", "end": "2016", "title": "Royal Academy of Arts", "subtitle": "Graduate Master’s Degree" },
-      { "start": "2012", "end": "2016", "title": "Zurich University of Arts", "subtitle": "Visual Communication" },
-      { "start": "2011", "end": "2012", "title": "Vogue France", "subtitle": "Graphic Designer" },
-      { "start": "2010", "end": "2011", "title": "Vignelli Associates", "subtitle": "Internship" },
-      { "start": "2010", "end": "2011", "title": "Norm Zurich", "subtitle": "Internship" }
+      {
+        "start": "2022",
+        "end": "2026",
+        "title": "SLIIT",
+        "subtitle": "BSc (Hons) IT, Software Engineering. Second Class Upper, WGPA 3.63, Dean’s List ×4."
+      },
+      { "start": "2022", "end": "2024", "title": "IMARA Software Solutions", "subtitle": "Web Application Developer (MERN, CRM)" },
+      { "start": "2021", "end": "2022", "title": "IMARA Software Solutions", "subtitle": "Mobile Application Developer Intern" },
+      { "start": "2018", "end": "2020", "title": "President’s Science College", "subtitle": "G.C.E. A/L Physical Science" }
     ]
   },
 
@@ -151,153 +152,185 @@
     "label": "Projects",
     "backLabel": "Back",
     "nextLabel": "Next Project",
+    "stackLabel": "Stack",
     "items": [
       {
-        "slug": "fusion-pro-presentation",
-        "title": "Fusion Pro Presentation",
-        "description": "I’ve come up with something truly unique.",
-        "category": "Presentation Design",
-        "date": "2026-03-12",
-        "image": "/images/project-fusion.jpg",
-        "intro": "Fusion Pro needed a launch presentation that felt as considered as the product itself. I built a modular slide system — type, grid and motion rules — that let the team tell one story across keynotes, sales decks and social cut-downs without it ever feeling templated.",
+        "slug": "brinex-vision",
+        "title": "BrineX Vision",
+        "description": "Real-time salt crystal quality control with YOLOv8.",
+        "category": "AI Research",
+        "period": "2025 - 2026",
+        "image": "/images/projects/brinex-dashboard.jpg",
+        "intro": "BrineX is a four-module AI platform for climate-intelligent salt production, built by a four-member team as our final-year research at SLIIT. I designed and delivered its computer vision quality-control module: the first AI-based visual inspection system for tropical salt production, detecting pure salt, impure salt and foreign material in real time.",
         "meta": [
-          {
-            "label": "Client",
-            "value": "Fusion"
-          },
-          {
-            "label": "Role",
-            "value": "Creative Director"
-          },
-          {
-            "label": "Year",
-            "value": "2025"
-          }
+          { "label": "Institution", "value": "SLIIT" },
+          { "label": "Role", "value": "CV & Full-Stack Engineer" },
+          { "label": "Year", "value": "2026" }
         ],
-        "link": {
-          "label": "View the full deck",
-          "href": "https://example.com"
-        },
+        "stack": ["YOLOv8", "PyTorch", "ONNX Runtime", "NestJS", "gRPC", "MongoDB", "Socket.io", "Next.js", "NX"],
+        "link": { "label": "Related IEEE paper (ICHORA 2026)", "href": "https://ieeexplore.ieee.org/document/11537206" },
         "gallery": [
-          {
-            "src": "/images/work-dark.jpg",
-            "alt": "Black smartphone standing on a granite block"
-          },
-          {
-            "src": "/images/work-light.jpg",
-            "alt": "White pump bottle on a speckled stone ledge"
-          }
+          { "src": "/images/projects/brinex-detection.jpg", "alt": "YOLOv8 inference frame with class-coloured bounding boxes and confidence scores" },
+          { "src": "/images/projects/brinex-batches.jpg", "alt": "Batch quality assessment table with purity, whiteness and quality per batch" },
+          { "src": "/images/projects/brinex-analytics.jpg", "alt": "Statistics dashboard with purity trend and class distribution charts" }
         ],
         "sections": [
           {
             "title": "Challenge",
-            "text": "Every team was building its own slides, so the product showed up differently in every room. Launch was six weeks away and there was no shared visual language to fall back on."
+            "text": "Quality checks in Sri Lankan salterns are done by eye under ambient light. It is slow, varies between inspectors and shifts, and leaves no quantitative record for export buyers. No annotated dataset of Sri Lankan salt crystals existed, and outdoor light, translucent crystals and specular glare make the problem hard for off-the-shelf models."
           },
           {
-            "title": "Objective",
-            "text": "Create a presentation system flexible enough for a keynote stage and a 1:1 sales call, with clear rules so anyone on the team could build on-brand slides in minutes."
+            "title": "Approach",
+            "text": "I built a dataset from field capture at Puttalam salterns: 650 images annotated in Label Studio and CVAT, expanded to 1,952 through augmentation. After benchmarking MobileNetV2, ResNet-50 and YOLOv8, I chose a YOLOv8 detector, exported it to ONNX and served it from a NestJS microservice with gRPC contracts, MongoDB persistence and Socket.io streaming to a Next.js operator dashboard. An HSV whiteness index and a class-weighted composite score turn detections into one actionable grade."
           },
           {
             "title": "Results",
-            "text": "The system shipped with 40 layouts and a motion kit. Deck build time dropped by more than half, and the launch keynote became the most-viewed video in the company’s history."
+            "text": "On a held-out test set the model reached 99.41% precision, 99.14% recall and 99.37% mAP@0.5, catching 99.67% of impure salt, the class that matters most for product quality. The full pipeline runs in under 50 ms per frame at 5 FPS on CPU-only hardware, and the composite score tracks expert judgement with a Spearman correlation above 0.92."
           }
         ]
       },
       {
-        "slug": "new-publication",
-        "title": "New Publication",
-        "description": "Read out my new article on the impact of AI.",
-        "category": "Editorial",
-        "date": "2026-02-03",
-        "image": "/images/project-publication.jpg",
-        "intro": "A long-form essay on how AI is reshaping creative work — not replacing the designer, but changing where the craft lives. I wrote, art-directed and designed the piece as a standalone reading experience.",
+        "slug": "city-bikes-segway",
+        "title": "City Bikes & Segway",
+        "description": "E-scooter rental and fleet tracking app, Qatar.",
+        "category": "Mobile & IoT",
+        "period": "Jan 2025 - Feb 2026",
+        "intro": "A self-service rental app for a Qatari micro-mobility operator, covering live-map vehicle discovery, unlock, in-app payment and wallet-based 30-minute and 1-hour ride passes, backed by an admin dashboard with live IoT fleet telemetry.",
         "meta": [
-          {
-            "label": "Publisher",
-            "value": "Independent"
-          },
-          {
-            "label": "Role",
-            "value": "Writer & Designer"
-          },
-          {
-            "label": "Year",
-            "value": "2026"
-          }
+          { "label": "Client", "value": "City Bikes & Segway" },
+          { "label": "Company", "value": "FocalDive" },
+          { "label": "Market", "value": "Qatar" }
         ],
-        "link": {
-          "label": "Read the article",
-          "href": "https://example.com"
-        },
-        "gallery": [
-          {
-            "src": "/images/work-brutal.jpg",
-            "alt": "Laptop showing a giant pixel cursor on a yellow screen"
-          }
-        ],
+        "stack": ["Cross-platform mobile", "IoT telemetry", "In-app payments", "Wallets", "RTL / Arabic"],
+        "gallery": [],
         "sections": [
           {
             "title": "Challenge",
-            "text": "Most writing about AI and design is either hype or fear. There was room for a calm, practical take grounded in real studio work."
+            "text": "Riders needed to find, unlock and pay for a scooter in a few taps, while the operator needed to see where every vehicle was and make sure no ride started without payment."
           },
           {
-            "title": "Objective",
-            "text": "Publish an essay that designers could actually use: concrete workflows, honest trade-offs, and a layout that made a 4,000-word read feel effortless."
+            "title": "Approach",
+            "text": "Built live-map discovery and unlock flows with wallet-based ride passes, integrated IoT location telemetry into an admin dashboard for live fleet visibility, and gated every unlock on payment authorisation."
           },
           {
             "title": "Results",
-            "text": "The article reached over 120k readers in its first month, was translated into four languages, and led to talks at two design conferences."
+            "text": "Shipped a bilingual English and Arabic app with full RTL support, giving riders self-service rentals and the operator real-time visibility across the fleet."
           }
         ]
       },
       {
-        "slug": "swoosh-playground",
-        "title": "Swoosh Playground",
-        "description": "Experimental project for Nike Shoe Launch.",
-        "category": "Experimental",
-        "date": "2025-11-20",
-        "image": "/images/project-swoosh.jpg",
-        "intro": "An interactive playground built for a sneaker launch: a browser-based space where visitors could remix colorways, play with physics-driven shoes and share their creations before the drop.",
+        "slug": "weels",
+        "title": "Weels",
+        "description": "End-to-end food ordering and delivery platform.",
+        "category": "Mobile Platform",
+        "period": "Oct 2025 - Jun 2026",
+        "intro": "Two connected cross-platform apps, one for customers and one for delivery partners, on a shared backend: restaurant browsing, cart, secure checkout, live order tracking, rider assignment and run history.",
         "meta": [
-          {
-            "label": "Client",
-            "value": "Nike"
-          },
-          {
-            "label": "Role",
-            "value": "Creative Director"
-          },
-          {
-            "label": "Year",
-            "value": "2025"
-          }
+          { "label": "Company", "value": "FocalDive" },
+          { "label": "Role", "value": "Full-Stack Engineer" },
+          { "label": "Year", "value": "2026" }
         ],
-        "link": {
-          "label": "Explore the playground",
-          "href": "https://example.com"
-        },
-        "gallery": [
-          {
-            "src": "/images/work-light.jpg",
-            "alt": "White pump bottle on a speckled stone ledge"
-          },
-          {
-            "src": "/images/work-dark.jpg",
-            "alt": "Black smartphone standing on a granite block"
-          }
-        ],
+        "stack": ["React Native", "NestJS", "PostgreSQL", "Real-time updates"],
+        "gallery": [],
         "sections": [
           {
             "title": "Challenge",
-            "text": "Sneaker launches all look the same: a countdown and a product shot. The brief was to build anticipation by letting people play with the shoe before they could buy it."
+            "text": "Dispatch ran over phone calls, customers had no live view of their order, and there was nothing stopping an order from being assigned twice or only partly assigned."
           },
           {
-            "title": "Objective",
-            "text": "Design an experience that ran smoothly on any phone, was fun within five seconds, and turned every visitor’s creation into something worth sharing."
+            "title": "Approach",
+            "text": "Pushed every rider state change to the customer app in real time and moved dispatch from phone calls into an in-system queue, with PostgreSQL relational constraints guarding order assignment."
           },
           {
             "title": "Results",
-            "text": "Over 300k designs were created in launch week, social shares outpaced the previous release threefold, and the drop sold out in under ten minutes."
+            "text": "Customers track orders live, riders work from a single queue with full run history, and the database itself prevents partial or duplicate assignments."
+          }
+        ]
+      },
+      {
+        "slug": "molt",
+        "title": "Molt",
+        "description": "Real-time livestock monitoring with IP cameras.",
+        "category": "Computer Vision",
+        "period": "Mar 2026 - Present",
+        "intro": "Molt replaces twice-daily manual poultry headcounts with continuous IP-camera monitoring, using DFCCNet density regression, automated threshold alerts and SMS and in-app notifications.",
+        "meta": [
+          { "label": "Company", "value": "FocalDive" },
+          { "label": "Role", "value": "AI Engineer" },
+          { "label": "Status", "value": "In progress" }
+        ],
+        "stack": ["DFCCNet", "Density regression", "IP cameras", "SMS alerts", "In-app notifications"],
+        "gallery": [],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Birds overlap heavily, so counting them by detection is unreliable, and memory use grew with every camera added until inference ran out of memory."
+          },
+          {
+            "title": "Approach",
+            "text": "Chose density regression over object detection to count overlapping birds accurately, and standardised frames to 600 px behind a single inference queue."
+          },
+          {
+            "title": "Results",
+            "text": "Headcounts now run continuously with automated alerts, out-of-memory failures are gone, and memory stays flat as more cameras come online."
+          }
+        ]
+      },
+      {
+        "slug": "passque",
+        "title": "PassQue",
+        "description": "Patient queue management mobile app.",
+        "category": "Mobile App",
+        "period": "Apr 2026 - Present",
+        "intro": "The patient-facing mobile app for a clinic queue system that digitises appointments and cuts physical waiting times, built from scratch in React Native.",
+        "meta": [
+          { "label": "Company", "value": "FocalDive" },
+          { "label": "Role", "value": "Mobile App Developer" },
+          { "label": "Status", "value": "In progress" }
+        ],
+        "stack": ["React Native", "Spring Boot", "REST APIs"],
+        "gallery": [],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Patients had to wait in the clinic to hold their place in line, with no way to see how long they would wait."
+          },
+          {
+            "title": "Approach",
+            "text": "Built real-time queue position tracking and status notifications with an accessible UI, integrating Spring Boot REST endpoints for queue, patient, doctor and clinic data."
+          },
+          {
+            "title": "Results",
+            "text": "Patients follow their place in the queue from their phone and arrive when it is their turn instead of waiting on site."
+          }
+        ]
+      },
+      {
+        "slug": "bmp",
+        "title": "BMP",
+        "description": "Sports arena booking and management platform.",
+        "category": "Web Platform",
+        "period": "Apr 2025 - Nov 2025",
+        "intro": "One calendar for players and turf owners: location-based discovery with live availability and instant booking, plus an owner dashboard for slots, rates, discounts, payouts and month-on-month earnings.",
+        "meta": [
+          { "label": "Company", "value": "FocalDive" },
+          { "label": "Role", "value": "Full-Stack Engineer" },
+          { "label": "Year", "value": "2025" }
+        ],
+        "stack": ["Next.js", "Full-stack", "Wallets", "Booking engine"],
+        "gallery": [],
+        "sections": [
+          {
+            "title": "Challenge",
+            "text": "Players and turf owners juggled separate schedules, which led to double bookings and manual settlement of balances and discounts."
+          },
+          {
+            "title": "Approach",
+            "text": "Built a single source of truth with slot locking at confirmation, recurring weekly slot configuration, and a built-in wallet for balances, discounts and settlements."
+          },
+          {
+            "title": "Results",
+            "text": "Double bookings are prevented by design, and owners manage slots, pricing and earnings from one dashboard."
           }
         ]
       }
@@ -307,19 +340,18 @@
   "socials": {
     "label": "Get in touch",
     "items": [
-      { "platform": "x", "label": "X (Twitter)", "href": "https://x.com" },
-      { "platform": "linkedin", "label": "LinkedIn", "href": "https://linkedin.com" },
-      { "platform": "instagram", "label": "Instagram", "href": "https://instagram.com" },
-      { "platform": "email", "label": "Email", "href": "mailto:hello@example.com" }
+      { "platform": "github", "label": "GitHub", "href": "https://github.com/arshartisan" },
+      { "platform": "linkedin", "label": "LinkedIn", "href": "https://linkedin.com/in/muhammed-arshaq" },
+      { "platform": "email", "label": "Email", "href": "mailto:arshartisan@gmail.com" }
     ]
   },
 
   "sideProjects": {
-    "label": "Side Projects",
+    "label": "Research & Recognition",
     "items": [
-      { "since": "Since 2023", "title": "Framer", "subtitle": "Official Partner" },
-      { "since": "Since 2021", "title": "Awwwards", "subtitle": "Jury Member" },
-      { "since": "Since 2019", "title": "ADC Club Global", "subtitle": "Jury Member" }
+      { "since": "May 2026", "title": "ICHORA 2026 (IEEE)", "subtitle": "Co-author, oral presentation in Ankara, Türkiye" },
+      { "since": "2025 - 2026", "title": "BrineX Research", "subtitle": "Final-year research, SLIIT (25-26J-431)" },
+      { "since": "2022 - 2026", "title": "Dean’s List ×4", "subtitle": "SLIIT, plus Scholarship Award" }
     ]
   },
 
@@ -332,15 +364,16 @@
   },
 
   "testimonial": {
-    "quote": "We were captivated by an extraordinary vision, reshaping our brand with unparalleled creativity.",
-    "author": "Ava Montgomery",
-    "role": "CMO, Apple",
-    "avatar": "/images/testimonial.jpg"
+    "quote": "From Pond to Market: A Two-Stage AI Forecasting System for Salt Production Planning in Puttalam, Sri Lanka",
+    "author": "IEEE ICHORA 2026",
+    "role": "Published on IEEE Xplore",
+    "avatar": "/images/me.png",
+    "href": "https://ieeexplore.ieee.org/document/11537206"
   },
 
   "cv": {
     "label": "CV",
     "view": { "label": "View", "href": "/cv.pdf" },
-    "download": { "label": "Download", "href": "/cv.pdf", "filename": "cv.pdf" }
+    "download": { "label": "Download", "href": "/cv.pdf", "filename": "Muhammed_Arshaq_CV.pdf" }
   }
 }
