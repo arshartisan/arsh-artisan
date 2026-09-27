@@ -105,13 +105,13 @@
         "start": "2022",
         "end": "2026",
         "title": "SLIIT",
-        "subtitle": "BSc (Hons) IT, specialising in Software Engineering. Second Class Upper (WGPA 3.63), Dean’s List ×4, SLIIT Scholarship Award."
+        "subtitle": "BSc (Hons) IT, Software Engineering"
       },
       {
         "start": "2018",
         "end": "2020",
         "title": "President’s Science College",
-        "subtitle": "G.C.E. A/L Physical Science: Physics, Chemistry, Combined Mathematics."
+        "subtitle": "G.C.E. A/L Physical Science"
       }
     ]
   },
@@ -490,7 +490,12 @@
       {
         "since": "2022 - 2026",
         "title": "Dean’s List ×4",
-        "subtitle": "SLIIT, plus Scholarship Award"
+        "subtitle": "Four semesters for outstanding academic performance (Jun 2022, Feb 2023, Aug 2023, Jun 2026)"
+      },
+      {
+        "since": "SLIIT",
+        "title": "SLIIT Scholarship Award",
+        "subtitle": "Superior academic performance, BSc (Hons) IT, Software Engineering"
       }
     ]
   },

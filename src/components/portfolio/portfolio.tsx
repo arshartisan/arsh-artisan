@@ -18,7 +18,7 @@ import { ExperienceCard, SideProjectsCard } from "./widgets/timeline-card";
 /**
  * Widget order matters: the grid auto-places in DOM order. At 6 columns this gives
  *   row 1:    Clock · Status · About       · Education
- *   rows 2-3: Experience     · Projects    · Education / Research
+ *   rows 2-3: Experience     · Projects    · Research & Recognition
  *   row 4:    Contact · Quote · Get in touch · Stat · CV
  * and collapses cleanly to 4 and 2 columns.
  */
@@ -40,10 +40,10 @@ export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
             <ClockCard time={theme.time} />
             <StatusCard status={theme.status} />
             <AboutCard about={theme.about} />
-            <ExperienceCard experience={content.education} tone="alt" />
+            <ExperienceCard experience={content.education} tone="alt" span="2x1" />
             <ExperienceCard experience={content.experience} />
             <ProjectsCard projects={content.projects} themePath={theme.path} />
-            <SideProjectsCard sideProjects={content.sideProjects} />
+            <SideProjectsCard sideProjects={content.sideProjects} span="2x2" />
             <ContactCard contact={content.contact} />
             <TestimonialCard testimonial={content.testimonial} />
             <SocialsCard socials={content.socials} />
