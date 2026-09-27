@@ -1,7 +1,6 @@
 import type { CSSProperties } from "react";
 import type { Theme } from "@/lib/content";
 import { WidgetCard } from "../widget-card";
-import { PillLink } from "../pill-link";
 
 export function StatusCard({ status }: { status: Theme["status"] }) {
   return (
@@ -20,9 +19,6 @@ export function StatusCard({ status }: { status: Theme["status"] }) {
       bodyClassName="justify-end gap-2.5"
     >
       <p className="text-pretty leading-[1.45] font-medium">{status.text}</p>
-      <PillLink href={status.action.href} icon="arrow">
-        {status.action.label}
-      </PillLink>
     </WidgetCard>
   );
 }

@@ -25,11 +25,7 @@
       "status": {
         "label": "Mode",
         "indicator": "#34c759",
-        "text": "Open to full-stack, mobile and AI engineering roles. Let’s build something that ships 🚀",
-        "action": {
-          "label": "Contact Me",
-          "href": "mailto:arshartisan@gmail.com"
-        }
+        "text": "Open to full-stack, mobile and AI engineering roles. Let’s build something that ships 🚀"
       },
       "about": {
         "label": "About",
@@ -54,11 +50,7 @@
       "status": {
         "label": "Mode",
         "indicator": "#fbbf24",
-        "text": "Building at FocalDive. Taking on a few new client projects this quarter 🛠️",
-        "action": {
-          "label": "Contact Me",
-          "href": "mailto:arshartisan@gmail.com"
-        }
+        "text": "Building at FocalDive. Taking on a few new client projects this quarter 🛠️"
       },
       "about": {
         "label": "About",
@@ -514,6 +506,9 @@
     "text": "Have a project or a role in mind? My inbox is always open.",
     "action": {
       "label": "Contact Me",
+      "cancelLabel": "Cancel",
+      "doneLabel": "Opening your email app",
+      "delay": 2000,
       "href": "mailto:arshartisan@gmail.com"
     }
   },
