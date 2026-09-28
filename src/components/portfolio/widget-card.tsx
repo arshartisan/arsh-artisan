@@ -69,7 +69,8 @@ export function WidgetCard({
       )}
     >
       <BorderGlowLayers />
-      <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
+      {/* Concentric with the card: its radius minus the p-2.5 (10px) inset, so clipped content and scrollbars follow the corner. */}
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden rounded-[calc(var(--radius-card)-10px)]">
         {label ? <WidgetHeader label={label} meta={meta} /> : null}
         <div className={cn("flex min-h-0 flex-1 flex-col", bodyClassName)}>{children}</div>
       </div>
