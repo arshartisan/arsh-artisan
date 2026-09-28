@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import { content, getNextProject, getProjectHref, type Project, type Theme, type ThemeId } from "@/lib/content";
+import { content, getNextProject, getPreviousProject, getProjectHref, type Project, type Theme, type ThemeId } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { LocalTime } from "./local-time";
 import { isExternal } from "./pill-link";
@@ -13,7 +13,12 @@ import { ProjectThumb } from "./widgets/projects-card";
 /** Entrance: fade + rise, staggered with delay utilities; skipped for reduced motion. */
 const enter = "animate-in fade-in slide-in-from-bottom-3 fill-mode-both duration-700 ease-out-strong motion-reduce:animate-none";
 
+/** Previous / next project cards at the bottom of the page. */
+const pagerLink =
+  "group flex items-center gap-4 rounded-card bg-card p-3 shadow-(--card-shadow) transition-colors duration-150 ease-out outline-none focus-visible:ring-2 focus-visible:ring-ring sm:gap-6 sm:p-4 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-item-hover";
+
 export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }; project: Project }) {
+  const previous = getPreviousProject(project.slug);
   const next = getNextProject(project.slug);
   const labels = content.projects;
 
@@ -140,21 +145,35 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
           ))}
         </div>
 
-        <Link
-          href={getProjectHref(theme.path, next.slug)}
-          className="group mt-8 flex items-center gap-4 rounded-card bg-card p-3 shadow-(--card-shadow) transition-colors duration-150 ease-out outline-none focus-visible:ring-2 focus-visible:ring-ring sm:gap-6 sm:p-4 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-item-hover"
-        >
-          <ProjectThumb project={next} className="sm:size-20" />
-          <span className="min-w-0 flex-1">
-            <span className="block text-xs text-muted-foreground">{labels.nextLabel}</span>
-            <span className="block truncate text-lg font-medium sm:text-2xl">{next.title}</span>
-          </span>
-          <ArrowRight
-            className="size-5 shrink-0 transition-transform duration-200 ease-out-strong group-hover:translate-x-1"
-            strokeWidth={1.5}
-            aria-hidden="true"
-          />
-        </Link>
+        <nav className="mt-8 grid gap-3 md:grid-cols-2">
+          {/* With only two projects, previous and next are the same one, so show it once. */}
+          {previous.slug !== next.slug ? (
+            <Link href={getProjectHref(theme.path, previous.slug)} className={cn(pagerLink, "text-end")}>
+              <ArrowLeft
+                className="size-5 shrink-0 transition-transform duration-200 ease-out-strong group-hover:-translate-x-1"
+                strokeWidth={1.5}
+                aria-hidden="true"
+              />
+              <span className="min-w-0 flex-1">
+                <span className="block text-xs text-muted-foreground">{labels.previousLabel}</span>
+                <span className="block truncate text-lg font-medium sm:text-2xl">{previous.title}</span>
+              </span>
+              <ProjectThumb project={previous} className="sm:size-20" />
+            </Link>
+          ) : null}
+          <Link href={getProjectHref(theme.path, next.slug)} className={cn(pagerLink, previous.slug === next.slug && "md:col-span-2")}>
+            <ProjectThumb project={next} className="sm:size-20" />
+            <span className="min-w-0 flex-1">
+              <span className="block text-xs text-muted-foreground">{labels.nextLabel}</span>
+              <span className="block truncate text-lg font-medium sm:text-2xl">{next.title}</span>
+            </span>
+            <ArrowRight
+              className="size-5 shrink-0 transition-transform duration-200 ease-out-strong group-hover:translate-x-1"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
+          </Link>
+        </nav>
       </main>
 
       <div className="mx-auto max-w-[calc(1124px+4rem)] px-4 md:px-8">

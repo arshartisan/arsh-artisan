@@ -7,6 +7,7 @@ import { gridVariants } from "@/lib/motion";
 /**
  * 2 / 4 / 6 column bento grid. Row height equals column width (square units),
  * derived from the container width so widgets keep their proportions at every size.
+ * On mobile rows size to content instead, and cards set their own minimum (see WidgetCard).
  */
 export function WidgetGrid({ children }: { children: ReactNode }) {
   return (
@@ -16,7 +17,7 @@ export function WidgetGrid({ children }: { children: ReactNode }) {
           initial="hidden"
           animate="visible"
           variants={gridVariants}
-          className="grid grid-cols-[repeat(var(--cols),minmax(0,1fr))] auto-rows-[minmax(var(--unit),auto)] gap-(--gap) [--cols:2] [--gap:16px] [--unit:calc((100cqw-(var(--cols)-1)*var(--gap))/var(--cols))] md:[--cols:4] md:[--gap:22px] lg:[--cols:6]"
+          className="grid grid-cols-[repeat(var(--cols),minmax(0,1fr))] auto-rows-[minmax(var(--unit),auto)] gap-(--gap) max-md:auto-rows-auto [--cols:2] [--gap:16px] [--unit:calc((100cqw-(var(--cols)-1)*var(--gap))/var(--cols))] md:[--cols:4] md:[--gap:22px] lg:[--cols:6]"
         >
           {children}
         </motion.div>

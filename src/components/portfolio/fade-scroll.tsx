@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 /**
  * Scroll container that fades its edges into the card surface, and only while
  * there is more content in that direction, so the fade doubles as a scroll hint.
+ * Below `lg` it doesn't scroll at all: content flows normally and the card grows to fit,
+ * so touch swipes over the card scroll the page instead of getting trapped.
  */
 export function FadeScroll({ children, className, label }: { children: ReactNode; className?: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,26 +34,26 @@ export function FadeScroll({ children, className, label }: { children: ReactNode
   }, []);
 
   return (
-    <div className="relative min-h-0 flex-1">
+    <div className="relative lg:min-h-0 lg:flex-1">
       <div
         ref={ref}
         tabIndex={0}
         role="region"
         aria-label={label}
         data-lenis-prevent
-        className={cn("thin-scrollbar absolute inset-0 overflow-y-auto overscroll-contain pe-2 outline-none", className)}
+        className={cn("thin-scrollbar outline-none lg:absolute lg:inset-0 lg:overflow-y-auto lg:overscroll-contain lg:pe-2", className)}
       >
         {children}
       </div>
       <div
         aria-hidden="true"
         data-visible={edges.top}
-        className="pointer-events-none absolute inset-x-0 top-0 h-8 bg-linear-to-b from-(--surface) to-transparent opacity-0 transition-opacity duration-150 ease-out data-[visible=true]:opacity-100"
+        className="pointer-events-none absolute inset-x-0 top-0 hidden h-8 bg-linear-to-b from-(--surface) to-transparent opacity-0 transition-opacity duration-150 ease-out data-[visible=true]:opacity-100 lg:block"
       />
       <div
         aria-hidden="true"
         data-visible={edges.bottom}
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-linear-to-t from-(--surface) to-transparent opacity-0 transition-opacity duration-150 ease-out data-[visible=true]:opacity-100"
+        className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-14 bg-linear-to-t from-(--surface) to-transparent opacity-0 transition-opacity duration-150 ease-out data-[visible=true]:opacity-100 lg:block"
       />
     </div>
   );

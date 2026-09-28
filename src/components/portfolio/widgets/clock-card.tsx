@@ -87,7 +87,7 @@ export function ClockCard({ time }: { time: Theme["time"] }) {
         viewBox="0 0 100 100"
         role="img"
         aria-label={`Clock for ${time.location}`}
-        className="aspect-square h-full max-h-24 w-auto text-fg opacity-0 transition-opacity duration-300 ease-out data-[ready=true]:opacity-100"
+        className="aspect-square h-full max-h-28 w-auto text-fg opacity-0 transition-opacity duration-300 ease-out data-[ready=true]:opacity-100"
       >
         {TICKS.map((i) => {
           const major = i % 5 === 0;

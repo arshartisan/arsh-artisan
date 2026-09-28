@@ -12,10 +12,22 @@ const spans = {
   "2x2": "col-span-2 row-span-2",
 } as const;
 
+/**
+ * On mobile the grid rows size to content, so each card carries its own square-unit minimum
+ * (the grid defines --unit and --gap). Cards that opt into `fitOnMobile` skip it and hug their content.
+ */
+const mobileMinHeights = {
+  "1x1": "max-md:min-h-(--unit)",
+  "2x1": "max-md:min-h-(--unit)",
+  "2x2": "max-md:min-h-[calc(2*var(--unit)+var(--gap))]",
+} as const;
+
 type WidgetCardProps = {
   span?: keyof typeof spans;
   /** "alt" surfaces can be styled to stand out from regular cards via --card-alt. */
   tone?: "default" | "alt";
+  /** On mobile, drop the square minimum and let the card be exactly as tall as its content. */
+  fitOnMobile?: boolean;
   label?: ReactNode;
   meta?: ReactNode;
   className?: string;
@@ -26,6 +38,7 @@ type WidgetCardProps = {
 export function WidgetCard({
   span = "1x1",
   tone = "default",
+  fitOnMobile = false,
   label,
   meta,
   className,
@@ -45,6 +58,7 @@ export function WidgetCard({
         // and a hovered card lifts above its neighbours so they don't cover the glow.
         "relative isolate flex min-w-0 flex-col rounded-card bg-(--surface) p-2.5 text-xs shadow-(--card-shadow) hover:z-10",
         spans[span],
+        fitOnMobile ? "max-md:row-span-1" : mobileMinHeights[span],
         className,
       )}
     >

@@ -31,6 +31,13 @@ export function getNextProject(slug: string) {
   return items[(index + 1) % items.length];
 }
 
+/** The project before `slug`, wrapping around to the last. */
+export function getPreviousProject(slug: string) {
+  const items = content.projects.items;
+  const index = items.findIndex((project) => project.slug === slug);
+  return items[(index - 1 + items.length) % items.length];
+}
+
 /** Project URLs live under the current theme so the page keeps its look. */
 export function getProjectHref(themePath: string, slug: string) {
   return `${themePath === "/" ? "" : themePath}/projects/${slug}`;
