@@ -46,7 +46,7 @@
   --color-tooltip-fg: var(--tooltip-fg);
 
   --radius-card: 14px;
-  --radius-item: 4px;
+  --radius-item: 16px;
 
   /* Strong curves from emil-design-eng; better-ui cross-fade curve */
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);

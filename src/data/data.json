@@ -24,6 +24,7 @@
       },
       "status": {
         "label": "Mode",
+        "mode": "Remote",
         "indicator": "#34c759",
         "text": "Open to full-stack, mobile and AI engineering roles. Let’s build something that ships 🚀"
       },
@@ -49,6 +50,7 @@
       },
       "status": {
         "label": "Mode",
+        "mode": "Remote",
         "indicator": "#fbbf24",
         "text": "Building at FocalDive. Taking on a few new client projects this quarter 🛠️"
       },
