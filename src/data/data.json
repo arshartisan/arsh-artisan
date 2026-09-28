@@ -485,9 +485,9 @@
     "label": "Get in touch",
     "items": [
       {
-        "platform": "x",
-        "label": "X (Twitter)",
-        "href": "https://x.com/arshartisan"
+        "platform": "email",
+        "label": "Email",
+        "href": "mailto:arshartisan@gmail.com"
       },
       {
         "platform": "github",
@@ -500,9 +500,9 @@
         "href": "https://linkedin.com/in/muhammed-arshaq"
       },
       {
-        "platform": "email",
-        "label": "Email",
-        "href": "mailto:arshartisan@gmail.com"
+        "platform": "whatsapp",
+        "label": "WhatsApp",
+        "href": "https://wa.me/94774338424"
       }
     ]
   },
