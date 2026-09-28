@@ -30,6 +30,11 @@ type WidgetCardProps = {
   fitOnMobile?: boolean;
   label?: ReactNode;
   meta?: ReactNode;
+  /**
+   * Sits at the header's right edge, outside the clipping wrapper, so effects like a ping
+   * can spill past the header. Pad `meta` on the right (pr-3.5) to leave room for it.
+   */
+  metaIndicator?: ReactNode;
   className?: string;
   bodyClassName?: string;
   children: ReactNode;
@@ -41,6 +46,7 @@ export function WidgetCard({
   fitOnMobile = false,
   label,
   meta,
+  metaIndicator,
   className,
   bodyClassName,
   children,
@@ -67,6 +73,8 @@ export function WidgetCard({
         {label ? <WidgetHeader label={label} meta={meta} /> : null}
         <div className={cn("flex min-h-0 flex-1 flex-col", bodyClassName)}>{children}</div>
       </div>
+      {/* Centred on the header's 12px line: 10px card padding + 6px, minus half the 8px dot. */}
+      {label && metaIndicator ? <span className="absolute top-3 right-2.5 flex">{metaIndicator}</span> : null}
     </motion.section>
   );
 }

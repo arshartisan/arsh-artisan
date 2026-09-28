@@ -6,13 +6,15 @@ export function StatusCard({ status }: { status: Theme["status"] }) {
   return (
     <WidgetCard
       label={status.label}
-      meta={
-        <span className="flex items-center gap-1.5" style={{ "--indicator": status.indicator } as CSSProperties}>
-          {status.mode}
-          <span aria-hidden="true" className="relative flex size-2">
-            <span className="absolute inset-0 rounded-full bg-(--indicator) opacity-60 animate-[status-ping_2.4s_cubic-bezier(0.23,1,0.32,1)_infinite]" />
-            <span className="relative size-2 rounded-full bg-(--indicator)" />
-          </span>
+      meta={<span className="pr-3.5">{status.mode}</span>}
+      metaIndicator={
+        <span
+          aria-hidden="true"
+          className="relative flex size-2"
+          style={{ "--indicator": status.indicator } as CSSProperties}
+        >
+          <span className="absolute inset-0 rounded-full bg-(--indicator) opacity-60 animate-[status-ping_2.4s_cubic-bezier(0.23,1,0.32,1)_infinite]" />
+          <span className="relative size-2 rounded-full bg-(--indicator)" />
         </span>
       }
       bodyClassName="justify-end gap-2.5"
