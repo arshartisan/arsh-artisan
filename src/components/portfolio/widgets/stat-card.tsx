@@ -10,7 +10,7 @@ import { WidgetCard } from "../widget-card";
  * Rotates through stats on a timer: the label swaps with a blur/slide and the
  * number counts from the previous value to the next. Pauses while hovered.
  */
-export function StatCard({ stats }: { stats: Content["stats"] }) {
+export function StatCard({ stats, className }: { stats: Content["stats"]; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const reduceMotion = useReducedMotion();
@@ -55,7 +55,7 @@ export function StatCard({ stats }: { stats: Content["stats"] }) {
 
   return (
     <div className="contents" onPointerEnter={() => setPaused(true)} onPointerLeave={() => setPaused(false)}>
-      <WidgetCard label={label} bodyClassName="@container items-center justify-center">
+      <WidgetCard label={label} className={className} bodyClassName="@container items-center justify-center">
         <div ref={ref} className="leading-none font-normal tracking-[-0.08em] tabular-nums text-[58cqw]">
           <motion.span aria-hidden="true">{rounded}</motion.span>
           <span className="sr-only">

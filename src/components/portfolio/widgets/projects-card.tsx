@@ -9,9 +9,17 @@ import { cn } from "@/lib/utils";
 import { FadeScroll } from "../fade-scroll";
 import { WidgetCard } from "../widget-card";
 
-export function ProjectsCard({ projects, themePath }: { projects: Content["projects"]; themePath: string }) {
+export function ProjectsCard({
+  projects,
+  themePath,
+  className,
+}: {
+  projects: Content["projects"];
+  themePath: string;
+  className?: string;
+}) {
   return (
-    <WidgetCard label={projects.label} span="2x2" bodyClassName="pt-2.5">
+    <WidgetCard label={projects.label} span="2x2" className={className} bodyClassName="pt-2.5">
       <FadeScroll label={projects.label}>
         {/* Cursor-following "View more" hint; like the socials, only the first tooltip waits. */}
         <TooltipProvider delay={250} closeDelay={0}>

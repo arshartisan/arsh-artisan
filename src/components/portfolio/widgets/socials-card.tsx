@@ -8,9 +8,9 @@ import { WidgetCard } from "../widget-card";
 
 type Social = { platform: string; label: string; href: string };
 
-export function SocialsCard({ socials }: { socials: { label: string; items: Social[] } }) {
+export function SocialsCard({ socials, className }: { socials: { label: string; items: Social[] }; className?: string }) {
   return (
-    <WidgetCard label={socials.label} span="2x1" bodyClassName="items-center justify-center pt-2.5">
+    <WidgetCard label={socials.label} span="2x1" className={className} bodyClassName="items-center justify-center pt-2.5">
       {/* Delay only the first tooltip; neighbours open instantly (Base UI's provider handles this). */}
       <TooltipProvider delay={250} closeDelay={0}>
         <ul className="flex items-center justify-center gap-3 sm:gap-4">

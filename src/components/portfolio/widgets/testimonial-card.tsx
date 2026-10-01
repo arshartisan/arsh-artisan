@@ -9,7 +9,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   const external = href ? isExternal(href) : false;
 
   return (
-    <WidgetCard tone="alt" className="transition-colors duration-150 ease-out has-[a:hover]:bg-item-hover">
+    <WidgetCard tone="alt" className="transition-colors duration-150 ease-out has-[a:hover]:bg-item-hover max-md:order-9">
       <figure className="flex flex-1 flex-col justify-between gap-3">
         <blockquote className="line-clamp-5 pt-1 text-pretty leading-[1.45] font-medium">
           {href ? (

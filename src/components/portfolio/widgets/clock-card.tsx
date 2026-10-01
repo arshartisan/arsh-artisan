@@ -28,7 +28,7 @@ function getZoneOffset(timeZone: string) {
 
 const TICKS = Array.from({ length: 60 }, (_, i) => i);
 
-export function ClockCard({ time }: { time: Theme["time"] }) {
+export function ClockCard({ time, className }: { time: Theme["time"]; className?: string }) {
   const svgRef = useRef<SVGSVGElement>(null);
   const hourRef = useRef<SVGGElement>(null);
   const minuteRef = useRef<SVGGElement>(null);
@@ -81,7 +81,7 @@ export function ClockCard({ time }: { time: Theme["time"] }) {
   }, [time.timezone, time.location, reduceMotion]);
 
   return (
-    <WidgetCard label={time.label} meta={time.location} bodyClassName="items-center justify-center pt-2">
+    <WidgetCard label={time.label} meta={time.location} className={className} bodyClassName="items-center justify-center pt-2">
       <svg
         ref={svgRef}
         viewBox="0 0 100 100"

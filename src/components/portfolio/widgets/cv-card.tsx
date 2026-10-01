@@ -7,7 +7,7 @@ const page = "absolute inset-0 rounded-md bg-item shadow-[0_0_0_1px_var(--line)]
 
 export function CVCard({ cv }: { cv: Content["cv"] }) {
   return (
-    <WidgetCard label={cv.label} meta={cv.meta} tone="alt" className="group/cv" bodyClassName="justify-between gap-2 pt-2.5">
+    <WidgetCard label={cv.label} meta={cv.meta} tone="alt" className="group/cv max-md:order-12" bodyClassName="justify-between gap-2 pt-2.5">
       {/* A small stack of pages that fans out on hover. */}
       <div aria-hidden="true" className="flex flex-1 items-center justify-center">
         <div className="relative h-16 w-12.5">

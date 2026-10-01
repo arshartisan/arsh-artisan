@@ -21,12 +21,14 @@ function TimelineCard({
   span,
   tone,
   compact = false,
+  className,
 }: {
   label: string;
   rows: TimelineRow[];
   span: "2x1" | "2x2";
   tone?: "default" | "alt";
   compact?: boolean;
+  className?: string;
 }) {
   const list = (
     <ol>
@@ -60,6 +62,7 @@ function TimelineCard({
       label={label}
       span={span}
       tone={tone}
+      className={className}
       // On mobile the list isn't scrolled, so the card grows to fit its content.
       fitOnMobile={!compact}
       bodyClassName={compact ? "justify-center" : undefined}
@@ -74,10 +77,12 @@ export function ExperienceCard({
   experience,
   tone = "default",
   span = "2x2",
+  className,
 }: {
   experience: { label: string; items: { start: string; end: string; title: string; subtitle: string; logo?: string }[] };
   tone?: "default" | "alt";
   span?: "2x1" | "2x2";
+  className?: string;
 }) {
   return (
     <TimelineCard
@@ -85,6 +90,7 @@ export function ExperienceCard({
       span={span}
       compact={span === "2x1"}
       tone={tone}
+      className={className}
       rows={experience.items.map((item, i) => ({
         key: `${item.title}-${i}`,
         title: item.title,
@@ -106,14 +112,17 @@ export function ExperienceCard({
 export function SideProjectsCard({
   sideProjects,
   span = "2x1",
+  className,
 }: {
   sideProjects: { label: string; items: { since: string; title: string; subtitle: string }[] };
   span?: "2x1" | "2x2";
+  className?: string;
 }) {
   return (
     <TimelineCard
       label={sideProjects.label}
       span={span}
+      className={className}
       rows={sideProjects.items.map((item) => ({
         key: item.title,
         title: item.title,

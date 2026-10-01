@@ -2,10 +2,11 @@ import type { CSSProperties } from "react";
 import type { Theme } from "@/lib/content";
 import { WidgetCard } from "../widget-card";
 
-export function StatusCard({ status }: { status: Theme["status"] }) {
+export function StatusCard({ status, className }: { status: Theme["status"]; className?: string }) {
   return (
     <WidgetCard
       label={status.label}
+      className={className}
       meta={<span className="pr-3.5">{status.mode}</span>}
       metaIndicator={
         <span

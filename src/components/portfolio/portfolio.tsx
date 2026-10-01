@@ -38,17 +38,17 @@ export function Portfolio({ theme }: { theme: Theme & { id: ThemeId } }) {
 
         <main className="py-8">
           <WidgetGrid>
-            <ClockCard time={theme.time} />
-            <StatusCard status={theme.status} />
-            <AboutCard about={theme.about} />
-            <ExperienceCard experience={content.education} tone="alt" span="2x1" />
-            <ExperienceCard experience={content.experience} />
-            <ProjectsCard projects={content.projects} themePath={theme.path} />
-            <SideProjectsCard sideProjects={content.sideProjects} span="2x2" />
-            <ContactCard contact={content.contact} />
+            <ClockCard time={theme.time} className="max-md:order-1" />
+            <StatusCard status={theme.status} className="max-md:order-2" />
+            <AboutCard about={theme.about} className="max-md:order-3" />
+            <ExperienceCard experience={content.education} tone="alt" span="2x1" className="max-md:order-6" />
+            <ExperienceCard experience={content.experience} className="max-md:order-5" />
+            <ProjectsCard projects={content.projects} themePath={theme.path} className="max-md:order-4" />
+            <SideProjectsCard sideProjects={content.sideProjects} span="2x2" className="max-md:order-7" />
+            <ContactCard contact={content.contact} className="max-md:order-8" />
             <TestimonialCard testimonial={content.testimonial} />
-            <SocialsCard socials={content.socials} />
-            <StatCard stats={content.stats} />
+            <SocialsCard socials={content.socials} className="max-md:order-10" />
+            <StatCard stats={content.stats} className="max-md:order-11" />
             <CVCard cv={content.cv} />
           </WidgetGrid>
         </main>
