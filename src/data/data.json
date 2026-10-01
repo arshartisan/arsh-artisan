@@ -75,14 +75,14 @@
         "start": "2022",
         "end": "2024",
         "title": "IMARA Software Solutions",
-        "logo": "/images/logos/imara.jpg",
+        "logo": "/images/icons/imara.jpg",
         "subtitle": "Web Application Developer. Production MERN-stack apps with CRM functionality and REST API integration."
       },
       {
         "start": "2021",
         "end": "2022",
         "title": "IMARA Software Solutions",
-        "logo": "/images/logos/imara.jpg",
+        "logo": "/images/icons/imara.jpg",
         "subtitle": "Mobile Application Developer Intern. Cross-platform app features built from Figma designs."
       }
     ]
@@ -94,14 +94,14 @@
         "start": "2022",
         "end": "2026",
         "title": "SLIIT",
-        "logo": "/images/logos/sliit.png",
+        "logo": "/images/icons/sliit.png",
         "subtitle": "BSc (Hons) IT, Software Engineering"
       },
       {
         "start": "2018",
         "end": "2020",
         "title": "President’s Science College",
-        "logo": "/images/logos/psc.jpg",
+        "logo": "/images/icons/psc.jpg",
         "subtitle": "G.C.E. A/L Physical Science"
       }
     ]
