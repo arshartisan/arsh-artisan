@@ -6,8 +6,8 @@
 @custom-variant dark (&:is([data-theme="dark"] *));
 
 @theme inline {
-  --font-sans: var(--font-manrope);
-  --font-heading: var(--font-manrope);
+  --font-sans: var(--font-geist-sans);
+  --font-heading: var(--font-geist-sans);
 
   /* shadcn tokens, resolved from the active widget theme */
   --color-background: var(--page);

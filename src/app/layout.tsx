@@ -1,13 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { content } from "@/lib/content";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-});
+const geist = GeistSans;
 
 export const metadata: Metadata = {
   title: content.site.title,
@@ -20,7 +17,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={manrope.variable} suppressHydrationWarning>
+    <html lang="en" className={geist.variable} suppressHydrationWarning>
       <body>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
