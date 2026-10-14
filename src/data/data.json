@@ -127,7 +127,7 @@
         "category": "AI Research",
         "period": "2025 - 2026",
         "icon": "/images/project-icons/brinex-icon.svg",
-        "image": "/images/projects/brinex-vision/dashboard.jpg",
+        "image": "/images/projects/brinex-vision/hero.png",
         "intro": "BrineX Vision is the computer vision quality-control component of a four-module climate-intelligent salt production ecosystem, developed by our four-member final-year research team at SLIIT. I built the inspection pipeline to locate pure salt, impure crystals and foreign material, measure each crystal's whiteness, and turn camera frames into visual quality scores and traceable batch records for operators at Sri Lankan salterns.",
         "meta": [
           {
