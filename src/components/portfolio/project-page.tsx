@@ -116,7 +116,10 @@ export function ProjectPage({ theme, project }: { theme: Theme & { id: ThemeId }
                 </div>
               ))}
             </dl>
-            {project.link ? <ProjectLink link={project.link} /> : null}
+            <div className="flex flex-col gap-3">
+              {"links" in project ? project.links?.map((link) => <ProjectLink key={link.href} link={link} />) : null}
+              {project.link ? <ProjectLink link={project.link} /> : null}
+            </div>
           </div>
         </section>
 

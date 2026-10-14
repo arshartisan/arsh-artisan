@@ -123,12 +123,12 @@
       {
         "slug": "brinex-vision",
         "title": "BrineX Vision",
-        "description": "Real-time salt crystal quality control with YOLOv8.",
+        "description": "Salt impurity detection, visual quality grading and batch traceability.",
         "category": "AI Research",
         "period": "2025 - 2026",
         "icon": "/images/project-icons/brinex-icon.svg",
         "image": "/images/projects/brinex-vision/dashboard.jpg",
-        "intro": "BrineX is a four-module AI platform for climate-intelligent salt production, built by a four-member team as our final-year research at SLIIT. I designed and delivered its computer vision quality-control module: the first AI-based visual inspection system for tropical salt production, detecting pure salt, impure salt and foreign material in real time.",
+        "intro": "BrineX Vision is the computer vision quality-control component of a four-module climate-intelligent salt production ecosystem, developed by our four-member final-year research team at SLIIT. I built the inspection pipeline to locate pure salt, impure crystals and foreign material, measure each crystal's whiteness, and turn camera frames into visual quality scores and traceable batch records for operators at Sri Lankan salterns.",
         "meta": [
           {
             "label": "Institution",
@@ -154,6 +154,12 @@
           "Next.js",
           "NX"
         ],
+        "links": [
+          {
+            "label": "Visit website",
+            "href": "https://brinex-vision.vercel.app/"
+          }
+        ],
         "link": {
           "label": "Related IEEE paper (ICHORA 2026)",
           "href": "https://ieeexplore.ieee.org/document/11537206"
@@ -175,27 +181,35 @@
         "sections": [
           {
             "title": "Challenge",
-            "text": "Quality checks in Sri Lankan salterns are done by eye under ambient light. It is slow, varies between inspectors and shifts, and leaves no quantitative record for export buyers. No annotated dataset of Sri Lankan salt crystals existed, and outdoor light, translucent crystals and specular glare make the problem hard for off-the-shelf models."
+            "text": "At Puttalam salterns, operators inspect harvested salt for discolouration, mineral inclusions, sand and organic debris by eye. Changing light, fatigue and translucent crystal surfaces make grading inconsistent. The system needed to locate individual crystals and contaminants, work within a 200 ms frame budget, and produce quality records operators could review."
           },
           {
             "title": "Approach",
-            "text": "I built a dataset from field capture at Puttalam salterns: 650 images annotated in Label Studio and CVAT, expanded to 1,952 through augmentation. After benchmarking MobileNetV2, ResNet-50 and YOLOv8, I chose a YOLOv8 detector, exported it to ONNX and served it from a NestJS microservice with gRPC contracts, MongoDB persistence and Socket.io streaming to a Next.js operator dashboard. An HSV whiteness index and a class-weighted composite score turn detections into one actionable grade."
+            "text": "I used roughly 650 field images from Puttalam, annotated in Label Studio and CVAT and expanded to 1,952 with augmentation. YOLOv8 provides the location and class of each object so HSV analysis can measure whiteness within its bounding box. ONNX inference feeds a NestJS service, with gRPC and WebSocket delivery to a Next.js dashboard and asynchronous session and batch storage in MongoDB. The dashboard combines detection overlays, region-of-interest controls and historical quality analysis."
+          },
+          {
+            "title": "Quality grading",
+            "text": "Detection-based purity is the share of salt detections classified as pure, with foreign objects reported separately. Whiteness measures brightness and colour neutrality in each detected region. A composite score weights that whiteness by class: 1.0 for pure salt, 0.3 for impure salt and 0.0 for foreign material, then averages scores across detections. These measures describe visual quality; chemical composition and food safety require separate testing."
           },
           {
             "title": "Results",
-            "text": "On a held-out test set the model reached 99.41% precision, 99.14% recall and 99.37% mAP@0.5, catching 99.67% of impure salt, the class that matters most for product quality. The full pipeline runs in under 50 ms per frame at 5 FPS on CPU-only hardware, and the composite score tracks expert judgement with a Spearman correlation above 0.92."
+            "text": "The research reports 99.41% precision, 99.14% recall, 99.37% mAP@0.5 and 79.95% mAP@0.5:0.95 on 293 held-out images. Impure-salt recall was 99.67%, with two missed instances out of 609. The reported synchronous pipeline took approximately 45 ms, with a CPU stream rate of 5 FPS. On 50 expert-rated frames, the composite score had a Spearman rank correlation above 0.92 with human quality rankings."
+          },
+          {
+            "title": "Next steps",
+            "text": "The prototype was evaluated on images from Puttalam. Broader deployment needs datasets and calibration from other salterns, where crystal shapes and contaminants may differ. Further work includes tracking crystals across frames, reducing background false positives, testing edge inference and connecting monitoring to physical sorting."
           }
         ]
       },
       {
         "slug": "molt",
         "title": "Molt",
-        "description": "Real-time livestock monitoring with IP cameras.",
+        "description": "Camera-based poultry monitoring and flock records in one mobile app.",
         "category": "Computer Vision",
         "period": "Mar 2026 - Present",
         "icon": "/images/project-icons/molt_icon_white.svg",
         "image": "/images/projects/molt/cover.png",
-        "intro": "Molt replaces twice-daily manual poultry headcounts with continuous IP-camera monitoring, using DFCCNet density regression, automated threshold alerts and SMS and in-app notifications.",
+        "intro": "Molt brings poultry-farm monitoring and flock recordkeeping into one mobile app. Farmers can review camera-detected birds alongside recorded flock totals, open connected camera views, track batches and bird activity, and investigate farm incidents. My AI engineering work uses DFCCNet density regression to count overlapping birds from IP-camera frames within this wider farm workflow.",
         "meta": [
           {
             "label": "Company",
@@ -218,19 +232,27 @@
           "IP cameras",
           "SMS alerts"
         ],
+        "link": {
+          "label": "Visit website",
+          "href": "https://molt-v1-ten.vercel.app/"
+        },
         "gallery": [],
         "sections": [
           {
             "title": "Challenge",
-            "text": "Birds overlap heavily, so counting them by detection is unreliable, and memory use grew with every camera added until inference ran out of memory."
+            "text": "Overlapping birds make individual object detection unreliable, while processing multiple camera feeds put pressure on inference memory. Farmers also need more than a count: observations must be tied to the right farm, barn and area, with clear timing and coverage, and compared against flock records without automatically changing them."
           },
           {
             "title": "Approach",
-            "text": "Chose density regression over object detection to count overlapping birds accurately, and standardised frames to 600 px behind a single inference queue."
+            "text": "I chose DFCCNet density regression for overlapping birds and standardised frames to 600 px behind a single inference queue to control memory use across cameras. The React Native app presents detected counts alongside recorded flock totals, shows missing or partial count states, and lets users open connected camera views for context. Camera compatibility, registration and area assignment are coordinated with the platform team."
+          },
+          {
+            "title": "Farm workflows",
+            "text": "Molt organises farms into barns and areas, with batches covering arrivals, placements and growing cycles. Deaths, culls and permitted bird movements stay linked to their batch and area. Owners invite staff by SMS and assign Manager or Worker access per farm. Incidents and notifications provide context for investigation, while camera recounts update observations independently of the flock ledger."
           },
           {
             "title": "Results",
-            "text": "Headcounts now run continuously with automated alerts, out-of-memory failures are gone, and memory stays flat as more cameras come online."
+            "text": "The app brings counts, camera context and batch records into a shared daily view for farm teams. Users can compare observed birds with recorded totals and investigate differences before recording changes. Development is ongoing; fresh counts and connected camera views depend on supported hardware, connectivity and configured monitoring services."
           }
         ]
       },
